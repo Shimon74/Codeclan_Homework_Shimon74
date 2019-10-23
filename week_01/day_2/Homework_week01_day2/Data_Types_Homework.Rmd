@@ -1,0 +1,142 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+
+```{r}
+#Question 1.
+
+#Create a vector called stock_prices with the following data points: 23, 27, 23, 21, 34, 24, 25, 30, 37, 30.
+
+
+
+stock_prices <- c(23, 27, 23, 21, 34, 24, 25, 30, 37, 30)
+```
+
+
+```{r}
+#Create a vector called day_of_week, which repeats Monday to Friday twice. i.e. ‘Monday’, ‘Tuesday’, ‘Wednesday’, ‘Thursday’, ‘Friday’, ‘Monday’, ‘Tuesday’, ‘Wednesday’, ‘Thursday’, ‘Friday’.
+
+day_of_week <- rep(c("Monday","Tuesday","Wednesday","Thursday","Friday"), times = 2)
+day_of_week
+```
+
+
+```{r}
+#Question 2.
+
+#Create a vector called day_of_week_factor, which has the same data as day_of_week, but is of factor type.
+
+day_of_week_factor <- as.factor(day_of_week)
+day_of_week_factor
+
+```
+
+```{r}
+#Created a vector called named_stock_prices, which contains the stock prices, named by days of the week
+
+names(stock_prices) <- day_of_week_factor
+named_stock_prices <- stock_prices
+named_stock_prices
+```
+
+
+```{r}
+#Question 3.
+
+#Make a data frame called stock_data containing the stock price and day of the week information, and View() the result.
+
+stock_data <- data.frame(stock_prices,day_of_week)
+
+
+
+
+
+```
+
+
+```{r}
+View(stock_data)
+```
+
+
+```{r}
+#Question 4.
+
+#Make a list called stock_list with named elements as follows: the vector of stock_prices, the vector day_of_week, and the data frame you made in question 3. Choose sensible names for the list elements.
+stock_list <- list(
+  a = stock_prices,
+  b = day_of_week,
+  c = stock_data
+)
+
+stock_list
+```
+
+
+```{r}
+#PART 2
+#Question 1.
+
+#Select the 4th, 5th and 6th stock prices from stock_prices.
+
+stock_prices[4:6]
+
+
+#Select the stock prices greater than 30 from stock_prices
+
+stock_prices[stock_prices>30]
+```
+
+
+```{r}
+#Question 2.
+
+#Select the day_of_week column from the stock_data data frame.
+
+stock_data[ ,"day_of_week"]
+
+
+```
+
+```{r}
+#Select the rows of the stock_data data frame where the stock_prices are less than 25.
+
+subset(stock_data, stock_prices < 25)
+
+```
+
+
+```{r}
+#Select the 1st column of stock_data.
+
+stock_data[ ,1]
+```
+
+
+```{r}
+
+#Select the 3rd row of stock_data.
+
+stock_data[3, ]
+```
+
+
+```{r}
+#Select the 3rd element in the 1st row of stock_data.
+
+stock_data[1,3]
+```
+
+
+```{r}
+#Question 4.
+
+#Select the data frame from within the list of stocks.
+
+stock_list["c"]
+
+```
+

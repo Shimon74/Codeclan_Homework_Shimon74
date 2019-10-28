@@ -1749,444 +1749,222 @@ summary {
 
 
 <!-- rnb-text-begin -->
+<p>2.2.1</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1F1ZXN0aW9uIDEuXG5cbiNDcmVhdGUgYSB2ZWN0b3IgY2FsbGVkIHN0b2NrX3ByaWNlcyB3aXRoIHRoZSBmb2xsb3dpbmcgZGF0YSBwb2ludHM6IDIzLCAyNywgMjMsIDIxLCAzNCwgMjQsIDI1LCAzMCwgMzcsIDMwLlxuXG5cblxuc3RvY2tfcHJpY2VzIDwtIGMoMjMsIDI3LCAyMywgMjEsIDM0LCAyNCwgMjUsIDMwLCAzNywgMzApXG5gYGAifQ== -->
-<pre class="r"><code>#Question 1.
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSBjKDEsIDIsIDMpXG5cbm91dHB1dCA8LSB4ICogMTUgKyA0XG5cbm91dHB1dFxuYGBgIn0= -->
+<pre class="r"><code>x &lt;- c(1, 2, 3)
 
-#Create a vector called stock_prices with the following data points: 23, 27, 23, 21, 34, 24, 25, 30, 37, 30.
+output &lt;- x * 15 + 4
 
-
-
-stock_prices &lt;- c(23, 27, 23, 21, 34, 24, 25, 30, 37, 30)</code></pre>
+output</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE5IDM0IDQ5XG4ifQ== -->
+<pre><code>[1] 19 34 49</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>answer</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0NyZWF0ZSBhIHZlY3RvciBjYWxsZWQgZGF5X29mX3dlZWssIHdoaWNoIHJlcGVhdHMgTW9uZGF5IHRvIEZyaWRheSB0d2ljZS4gaS5lLiDigJhNb25kYXnigJksIOKAmFR1ZXNkYXnigJksIOKAmFdlZG5lc2RheeKAmSwg4oCYVGh1cnNkYXnigJksIOKAmEZyaWRheeKAmSwg4oCYTW9uZGF54oCZLCDigJhUdWVzZGF54oCZLCDigJhXZWRuZXNkYXnigJksIOKAmFRodXJzZGF54oCZLCDigJhGcmlkYXnigJkuXG5cbmRheV9vZl93ZWVrIDwtIHJlcChjKFwiTW9uZGF5XCIsXCJUdWVzZGF5XCIsXCJXZWRuZXNkYXlcIixcIlRodXJzZGF5XCIsXCJGcmlkYXlcIiksIHRpbWVzID0gMilcbmRheV9vZl93ZWVrXG5gYGAifQ== -->
-<pre class="r"><code>#Create a vector called day_of_week, which repeats Monday to Friday twice. i.e. ‘Monday’, ‘Tuesday’, ‘Wednesday’, ‘Thursday’, ‘Friday’, ‘Monday’, ‘Tuesday’, ‘Wednesday’, ‘Thursday’, ‘Friday’.
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGltZXNfMTVfYWRkXzQgPC0gZnVuY3Rpb24oeCkge1xuICB4ICogMTUgKyA0XG59XG5cbnRpbWVzXzE1X2FkZF80KDIpXG5gYGAifQ== -->
+<pre class="r"><code>times_15_add_4 &lt;- function(x) {
+  x * 15 + 4
+}
 
-day_of_week &lt;- rep(c(&quot;Monday&quot;,&quot;Tuesday&quot;,&quot;Wednesday&quot;,&quot;Thursday&quot;,&quot;Friday&quot;), times = 2)
-day_of_week</code></pre>
+times_15_add_4(2)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIk1vbmRheVwiICAgIFwiVHVlc2RheVwiICAgXCJXZWRuZXNkYXlcIiBcIlRodXJzZGF5XCIgIFwiRnJpZGF5XCIgICAgXCJNb25kYXlcIiAgIFxuIFs3XSBcIlR1ZXNkYXlcIiAgIFwiV2VkbmVzZGF5XCIgXCJUaHVyc2RheVwiICBcIkZyaWRheVwiICAgXG4ifQ== -->
-<pre><code> [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;    &quot;Monday&quot;   
- [7] &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;   </code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDM0XG4ifQ== -->
+<pre><code>[1] 34</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.2.2</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmlyZF9uYW1lIDwtIGMoXCJnb29zZVwiLCBcImR1Y2tcIixcInBpZ2VvblwiKVxuXG54IDwtIGMoXCJnb29zZVwiLFwiYXBwbGVcIiwgNSwgXCJzZWFndWxsXCIpXG5cbmlmZWxzZSh4ICVpbiUgYmlyZF9uYW1lLCBcImJpcmRcIiwgXCJub3QgYmlyZFwiKVxuYGBgIn0= -->
+<pre class="r"><code>bird_name &lt;- c(&quot;goose&quot;, &quot;duck&quot;,&quot;pigeon&quot;)
+
+x &lt;- c(&quot;goose&quot;,&quot;apple&quot;, 5, &quot;seagull&quot;)
+
+ifelse(x %in% bird_name, &quot;bird&quot;, &quot;not bird&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYmlyZFwiICAgICBcIm5vdCBiaXJkXCIgXCJub3QgYmlyZFwiIFwibm90IGJpcmRcIlxuIn0= -->
+<pre><code>[1] &quot;bird&quot;     &quot;not bird&quot; &quot;not bird&quot; &quot;not bird&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1F1ZXN0aW9uIDIuXG5cbiNDcmVhdGUgYSB2ZWN0b3IgY2FsbGVkIGRheV9vZl93ZWVrX2ZhY3Rvciwgd2hpY2ggaGFzIHRoZSBzYW1lIGRhdGEgYXMgZGF5X29mX3dlZWssIGJ1dCBpcyBvZiBmYWN0b3IgdHlwZS5cblxuZGF5X29mX3dlZWtfZmFjdG9yIDwtIGFzLmZhY3RvcihkYXlfb2Zfd2VlaylcbmRheV9vZl93ZWVrX2ZhY3RvclxuYGBgIn0= -->
-<pre class="r"><code>#Question 2.
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSBcImFwcGxlXCJcblxuaWYoeCAlaW4lIGJpcmRfbmFtZSkge1xuICBwcmludChcImJpcmRcIilcbn1cbnByaW50KFwibm90IGJpcmRcIilcbmBgYCJ9 -->
+<pre class="r"><code>x &lt;- &quot;apple&quot;
 
-#Create a vector called day_of_week_factor, which has the same data as day_of_week, but is of factor type.
-
-day_of_week_factor &lt;- as.factor(day_of_week)
-day_of_week_factor</code></pre>
+if(x %in% bird_name) {
+  print(&quot;bird&quot;)
+}
+print(&quot;not bird&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBNb25kYXkgICAgVHVlc2RheSAgIFdlZG5lc2RheSBUaHVyc2RheSAgRnJpZGF5ICAgIE1vbmRheSAgICBUdWVzZGF5ICBcbiBbOF0gV2VkbmVzZGF5IFRodXJzZGF5ICBGcmlkYXkgICBcbkxldmVsczogRnJpZGF5IE1vbmRheSBUaHVyc2RheSBUdWVzZGF5IFdlZG5lc2RheVxuIn0= -->
-<pre><code> [1] Monday    Tuesday   Wednesday Thursday  Friday    Monday    Tuesday  
- [8] Wednesday Thursday  Friday   
-Levels: Friday Monday Thursday Tuesday Wednesday</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibm90IGJpcmRcIlxuIn0= -->
+<pre><code>[1] &quot;not bird&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>answer:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0NyZWF0ZWQgYSB2ZWN0b3IgY2FsbGVkIG5hbWVkX3N0b2NrX3ByaWNlcywgd2hpY2ggY29udGFpbnMgdGhlIHN0b2NrIHByaWNlcywgbmFtZWQgYnkgZGF5cyBvZiB0aGUgd2Vla1xuXG5uYW1lcyhzdG9ja19wcmljZXMpIDwtIGRheV9vZl93ZWVrX2ZhY3RvclxubmFtZWRfc3RvY2tfcHJpY2VzIDwtIHN0b2NrX3ByaWNlc1xubmFtZWRfc3RvY2tfcHJpY2VzXG5gYGAifQ== -->
-<pre class="r"><code>#Created a vector called named_stock_prices, which contains the stock prices, named by days of the week
-
-names(stock_prices) &lt;- day_of_week_factor
-named_stock_prices &lt;- stock_prices
-named_stock_prices</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXNfYmlyZCA8LSBmdW5jdGlvbih4KSB7XG4gIGlmICh4ICVpbiUgYyhcImdvb3NlXCIsIFwiZHVja1wiLCBcInBpZ2VvblwiKSkge1xuICAgIHJldHVybihcImJpcmRcIilcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4oXCJub3QgYmlyZFwiKVxuICB9XG59XG5gYGAifQ== -->
+<pre class="r"><code>is_bird &lt;- function(x) {
+  if (x %in% c(&quot;goose&quot;, &quot;duck&quot;, &quot;pigeon&quot;)) {
+    return(&quot;bird&quot;)
+  } else {
+    return(&quot;not bird&quot;)
+  }
+}</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgTW9uZGF5ICAgVHVlc2RheSBXZWRuZXNkYXkgIFRodXJzZGF5ICAgIEZyaWRheSAgICBNb25kYXkgICBUdWVzZGF5IFdlZG5lc2RheSBcbiAgICAgICAyMyAgICAgICAgMjcgICAgICAgIDIzICAgICAgICAyMSAgICAgICAgMzQgICAgICAgIDI0ICAgICAgICAyNSAgICAgICAgMzAgXG4gVGh1cnNkYXkgICAgRnJpZGF5IFxuICAgICAgIDM3ICAgICAgICAzMCBcbiJ9 -->
-<pre><code>   Monday   Tuesday Wednesday  Thursday    Friday    Monday   Tuesday Wednesday 
-       23        27        23        21        34        24        25        30 
- Thursday    Friday 
-       37        30 </code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.2.3</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSBcInlcIlxuXG5pZmVsc2UoIGlzLm51bWVyaWMoeCkgPT0gVFJVRSwgeCAqIDEwLCBcImludmFsaWQgaW5wdXRcIilcbmBgYCJ9 -->
+<pre class="r"><code>x &lt;- &quot;y&quot;
+
+ifelse( is.numeric(x) == TRUE, x * 10, &quot;invalid input&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW52YWxpZCBpbnB1dFwiXG4ifQ== -->
+<pre><code>[1] &quot;invalid input&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>answer</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1F1ZXN0aW9uIDMuXG5cbiNNYWtlIGEgZGF0YSBmcmFtZSBjYWxsZWQgc3RvY2tfZGF0YSBjb250YWluaW5nIHRoZSBzdG9jayBwcmljZSBhbmQgZGF5IG9mIHRoZSB3ZWVrIGluZm9ybWF0aW9uLCBhbmQgVmlldygpIHRoZSByZXN1bHQuXG5cbnN0b2NrX2RhdGEgPC0gZGF0YS5mcmFtZShzdG9ja19wcmljZXMsZGF5X29mX3dlZWspXG5cblxuXG5cblxuYGBgIn0= -->
-<pre class="r"><code>#Question 3.
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGltZXNfMTAgPC0gZnVuY3Rpb24oeCkge1xuICBpZiAoaXMubnVtZXJpYyh4KSkge1xuICAgIHJldHVybih4ICogMTApXG4gIH0gZWxzZSB7XG4gICAgcmV0dXJuKFwiSW52YWxpZCBpbnB1dFwiKVxuICB9XG59XG5gYGAifQ== -->
+<pre class="r"><code>times_10 &lt;- function(x) {
+  if (is.numeric(x)) {
+    return(x * 10)
+  } else {
+    return(&quot;Invalid input&quot;)
+  }
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.3.1.1</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5zaXplcyA8LSBjKDEzLCAxNSwgMTAsIDgsIDIyKVxuXG5pZmVsc2Uoc2l6ZXMgPiAxMCwgXCJCaWdcIiwgXCJTbWFsbFwiKVxuYGBgIn0= -->
+<pre class="r"><code>
+sizes &lt;- c(13, 15, 10, 8, 22)
 
-#Make a data frame called stock_data containing the stock price and day of the week information, and View() the result.
-
-stock_data &lt;- data.frame(stock_prices,day_of_week)
+ifelse(sizes &gt; 10, &quot;Big&quot;, &quot;Small&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQmlnXCIgICBcIkJpZ1wiICAgXCJTbWFsbFwiIFwiU21hbGxcIiBcIkJpZ1wiICBcbiJ9 -->
+<pre><code>[1] &quot;Big&quot;   &quot;Big&quot;   &quot;Small&quot; &quot;Small&quot; &quot;Big&quot;  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.3.1.2</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5kcGx5cjo6cmVjb2RlKHNpemVzLCBcblwiMTNcIiA9IFwiQmlnXCIsIFxuXCIxNVwiID0gXCJCaWdcIixcblwiMTBcIiA9IFwiU21hbGxcIiwgXG5cIjhcIiAgPSBcIlNtYWxsXCIsIFxuXCIyMlwiID0gXCJCaWdcIiBcbilcbmBgYCJ9 -->
+<pre class="r"><code>
+dplyr::recode(sizes, 
+&quot;13&quot; = &quot;Big&quot;, 
+&quot;15&quot; = &quot;Big&quot;,
+&quot;10&quot; = &quot;Small&quot;, 
+&quot;8&quot;  = &quot;Small&quot;, 
+&quot;22&quot; = &quot;Big&quot; 
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQmlnXCIgICBcIkJpZ1wiICAgXCJTbWFsbFwiIFwiU21hbGxcIiBcIkJpZ1wiICBcbiJ9 -->
+<pre><code>[1] &quot;Big&quot;   &quot;Big&quot;   &quot;Small&quot; &quot;Small&quot; &quot;Big&quot;  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZHBseXI6OnJlY29kZShzaXplcywgYDEwYCA9IFwiU21hbGxcIiwgYDhgID0gXCJTbWFsbFwiLCAuZGVmYXVsdCA9IFwiQmlnXCIpXG5gYGAifQ== -->
+<pre class="r"><code>dplyr::recode(sizes, `10` = &quot;Small&quot;, `8` = &quot;Small&quot;, .default = &quot;Big&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQmlnXCIgICBcIkJpZ1wiICAgXCJTbWFsbFwiIFwiU21hbGxcIiBcIkJpZ1wiICBcbiJ9 -->
+<pre><code>[1] &quot;Big&quot;   &quot;Big&quot;   &quot;Small&quot; &quot;Small&quot; &quot;Big&quot;  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.3.1.3</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5kcGx5cjo6Y2FzZV93aGVuKFxuICBzaXplcyA+IDEwIH4gXCJCaWdcIixcbiAgVFJVRSAgICAgICB+IFwiU21hbGxcIlxuKVxuYGBgIn0= -->
+<pre class="r"><code>
+dplyr::case_when(
+  sizes &gt; 10 ~ &quot;Big&quot;,
+  TRUE       ~ &quot;Small&quot;
+)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQmlnXCIgICBcIkJpZ1wiICAgXCJTbWFsbFwiIFwiU21hbGxcIiBcIkJpZ1wiICBcbiJ9 -->
+<pre><code>[1] &quot;Big&quot;   &quot;Big&quot;   &quot;Small&quot; &quot;Small&quot; &quot;Big&quot;  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.3.2.1</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5mcnVpdCA8LSBjKFwiYXBwbGVcIiwgXCJhcHBsZVwiLCBcImJhbmFuYVwiLCBcImNoZXJyeVwiLCBcImNoZXJyeVwiKVxuXG5gYGAifQ== -->
+<pre class="r"><code>
+fruit &lt;- c(&quot;apple&quot;, &quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;cherry&quot;)
 </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>2.3.2.2</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhzdG9ja19kYXRhKVxuYGBgIn0= -->
-<pre class="r"><code>View(stock_data)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZHBseXI6OnJlY29kZShmcnVpdCxcbiAgXCJhcHBsZVwiID0gXCJhbHBhY2FcIixcbiAgXCJiYW5hbmFcIiA9IFwiYm9ub2JvXCIsXG4gIFwiY2hlcnJ5XCIgPSBcImNoaXBtdW5rXCJcbilcbmBgYCJ9 -->
+<pre class="r"><code>dplyr::recode(fruit,
+  &quot;apple&quot; = &quot;alpaca&quot;,
+  &quot;banana&quot; = &quot;bonobo&quot;,
+  &quot;cherry&quot; = &quot;chipmunk&quot;
+)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1F1ZXN0aW9uIDQuXG5cbiNNYWtlIGEgbGlzdCBjYWxsZWQgc3RvY2tfbGlzdCB3aXRoIG5hbWVkIGVsZW1lbnRzIGFzIGZvbGxvd3M6IHRoZSB2ZWN0b3Igb2Ygc3RvY2tfcHJpY2VzLCB0aGUgdmVjdG9yIGRheV9vZl93ZWVrLCBhbmQgdGhlIGRhdGEgZnJhbWUgeW91IG1hZGUgaW4gcXVlc3Rpb24gMy4gQ2hvb3NlIHNlbnNpYmxlIG5hbWVzIGZvciB0aGUgbGlzdCBlbGVtZW50cy5cbnN0b2NrX2xpc3QgPC0gbGlzdChcbiAgYSA9IHN0b2NrX3ByaWNlcyxcbiAgYiA9IGRheV9vZl93ZWVrLFxuICBjID0gc3RvY2tfZGF0YVxuKVxuXG5zdG9ja19saXN0XG5gYGAifQ== -->
-<pre class="r"><code>#Question 4.
-
-#Make a list called stock_list with named elements as follows: the vector of stock_prices, the vector day_of_week, and the data frame you made in question 3. Choose sensible names for the list elements.
-stock_list &lt;- list(
-  a = stock_prices,
-  b = day_of_week,
-  c = stock_data
-)
-
-stock_list</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJGFcbiAgIE1vbmRheSAgIFR1ZXNkYXkgV2VkbmVzZGF5ICBUaHVyc2RheSAgICBGcmlkYXkgICAgTW9uZGF5ICAgVHVlc2RheSBXZWRuZXNkYXkgXG4gICAgICAgMjMgICAgICAgIDI3ICAgICAgICAyMyAgICAgICAgMjEgICAgICAgIDM0ICAgICAgICAyNCAgICAgICAgMjUgICAgICAgIDMwIFxuIFRodXJzZGF5ICAgIEZyaWRheSBcbiAgICAgICAzNyAgICAgICAgMzAgXG5cbiRiXG4gWzFdIFwiTW9uZGF5XCIgICAgXCJUdWVzZGF5XCIgICBcIldlZG5lc2RheVwiIFwiVGh1cnNkYXlcIiAgXCJGcmlkYXlcIiAgICBcIk1vbmRheVwiICAgXG4gWzddIFwiVHVlc2RheVwiICAgXCJXZWRuZXNkYXlcIiBcIlRodXJzZGF5XCIgIFwiRnJpZGF5XCIgICBcblxuJGNcbiJ9 -->
-<pre><code>$a
-   Monday   Tuesday Wednesday  Thursday    Friday    Monday   Tuesday Wednesday 
-       23        27        23        21        34        24        25        30 
- Thursday    Friday 
-       37        30 
-
-$b
- [1] &quot;Monday&quot;    &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;    &quot;Monday&quot;   
- [7] &quot;Tuesday&quot;   &quot;Wednesday&quot; &quot;Thursday&quot;  &quot;Friday&quot;   
-
-$c</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSeTA3RE1CQjBYaTAxdENEMU81SUxRaTFDUWdXaDNyaWdJSHFMVE9MU0tNR3VISWZDalM4dnJKTjFIMUVqSmJNejN1enNybCtlRnRkMFFRa2hIdkY2OEEwZ0pNRnJQQStuaFBndUVJZjRaR0R3RzQ3SEVCaHhCQytkVFVqenpPNFFMYjlCZkVDY0l0NGkzaU0rL2g1eHFEODBkZEhETjUwMG5aa21UbXBIRGZaSy9zWExDcUtySmd2VnVjb3o5bVBac3hSN2RoYXZhbFh0ZVQrdStRRWR2UEZNdE1LeFU1Q1dyTEpHTy9zbFM3VlVFRzI3NllKOWNwdnVvbmhSYVprV3lWcmxLWnkxMmpsWUpYS1piRGd2T2pVR1NtNGlXOGRzeVcxM1o3WmxFcjIvVGpzMFk1cEZTd1cvbkdpcEw5YzZsd0tLdVdOYzZlSFBqdW9JbDdVdzVsbVlybXBSaEJPOEpnZnZiWWd4UFlqZDF0SzNqZTB1aEl1UFhIQzdtNUs5OHhMSkNJWnNab3hnTFVMYlNVQ3RJaTAxczNrMGxhVlZtdG5JOWgvbEcwQ0V5UUlBQUE9PSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTkFcbiJ9 -->
-<pre><code>NA</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYWxwYWNhXCIgICBcImFscGFjYVwiICAgXCJib25vYm9cIiAgIFwiY2hpcG11bmtcIiBcImNoaXBtdW5rXCJcbiJ9 -->
+<pre><code>[1] &quot;alpaca&quot;   &quot;alpaca&quot;   &quot;bonobo&quot;   &quot;chipmunk&quot; &quot;chipmunk&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>2.3.2.3</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1BBUlQgMlxuI1F1ZXN0aW9uIDEuXG5cbiNTZWxlY3QgdGhlIDR0aCwgNXRoIGFuZCA2dGggc3RvY2sgcHJpY2VzIGZyb20gc3RvY2tfcHJpY2VzLlxuXG5zdG9ja19wcmljZXNbNDo2XVxuYGBgIn0= -->
-<pre class="r"><code>#PART 2
-#Question 1.
-
-#Select the 4th, 5th and 6th stock prices from stock_prices.
-
-stock_prices[4:6]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiVGh1cnNkYXkgICBGcmlkYXkgICBNb25kYXkgXG4gICAgICAyMSAgICAgICAzNCAgICAgICAyNCBcbiJ9 -->
-<pre><code>Thursday   Friday   Monday 
-      21       34       24 </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1NlbGVjdCB0aGUgc3RvY2sgcHJpY2VzIGdyZWF0ZXIgdGhhbiAzMCBmcm9tIHN0b2NrX3ByaWNlc1xuXG5zdG9ja19wcmljZXNbc3RvY2tfcHJpY2VzPjMwXVxuYGBgIn0= -->
-<pre class="r"><code>#Select the stock prices greater than 30 from stock_prices
-
-stock_prices[stock_prices&gt;30]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICBGcmlkYXkgVGh1cnNkYXkgXG4gICAgICAzNCAgICAgICAzNyBcbiJ9 -->
-<pre><code>  Friday Thursday 
-      34       37 </code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1F1ZXN0aW9uIDIuXG5cbiNTZWxlY3QgdGhlIGRheV9vZl93ZWVrIGNvbHVtbiBmcm9tIHRoZSBzdG9ja19kYXRhIGRhdGEgZnJhbWUuXG5cbnN0b2NrX2RhdGFbICxcImRheV9vZl93ZWVrXCJdXG5gYGAifQ== -->
-<pre class="r"><code>#Question 2.
-
-#Select the day_of_week column from the stock_data data frame.
-
-stock_data[ ,&quot;day_of_week&quot;]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBNb25kYXkgICAgVHVlc2RheSAgIFdlZG5lc2RheSBUaHVyc2RheSAgRnJpZGF5ICAgIE1vbmRheSAgICBUdWVzZGF5ICBcbiBbOF0gV2VkbmVzZGF5IFRodXJzZGF5ICBGcmlkYXkgICBcbkxldmVsczogRnJpZGF5IE1vbmRheSBUaHVyc2RheSBUdWVzZGF5IFdlZG5lc2RheVxuIn0= -->
-<pre><code> [1] Monday    Tuesday   Wednesday Thursday  Friday    Monday    Tuesday  
- [8] Wednesday Thursday  Friday   
-Levels: Friday Monday Thursday Tuesday Wednesday</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1NlbGVjdCB0aGUgcm93cyBvZiB0aGUgc3RvY2tfZGF0YSBkYXRhIGZyYW1lIHdoZXJlIHRoZSBzdG9ja19wcmljZXMgYXJlIGxlc3MgdGhhbiAyNS5cblxuc3Vic2V0KHN0b2NrX2RhdGEsIHN0b2NrX3ByaWNlcyA8IDI1KVxuYGBgIn0= -->
-<pre class="r"><code>#Select the rows of the stock_data data frame where the stock_prices are less than 25.
-
-subset(stock_data, stock_prices &lt; 25)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVJ5MDdETUJCMG5pVUJxa3I5amtRZ2hPaVJBK3FOQ3dxaXQ4ZzREbzFpN01weEtQeDhZZTNZYVJ0aEtkblo4VDVtMXk5UG03dDBreUtFQWhURThJOEFvdWkxV0djcmhFSWZIQStGS05IMkc2NlhBRFE1aHk5OGZFRG1qUGJlMmhXeUo3aldjVFluTWwwTVBpc2NNL3BGV1Fkb1lhSXN1NVpOaFgrYzl5ejQwYnNvdHIzc2p2NnM2T21KbTd6UmlnL0VlYWVJTU55NVJtUDdHaE1sSktERE5KempUK3JDZlV0ZWRVcVF0dHpKaHNEZHdGMUNxMUxVNVo3U2RsSWprV0tmdXpwdUc1N2RoTWJ4a0JEOFRtU2xGVlk0cnlXay9pTnRKbmFxRVJ5SytrdTcydE5rVDA2SVJjKzFpQ29qMjU2MzJlMk43bUNWZUZhWlp4VTViTjhwZE1yR2w2SDhvK0hVTFluaGQ4cXNNNGRwemJBNTdJY3JOd3F3WGE2RXdpNHVKWUk1eGd5SERuL1kyTkVTaWdJQUFBPT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday","_rn_":"1"},{"1":"23","2":"Wednesday","_rn_":"3"},{"1":"21","2":"Thursday","_rn_":"4"},{"1":"24","2":"Monday","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
-<pre class="r"><code>NA</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1NlbGVjdCB0aGUgMXN0IGNvbHVtbiBvZiBzdG9ja19kYXRhLlxuXG5zdG9ja19kYXRhWyAsMV1cbmBgYCJ9 -->
-<pre class="r"><code>#Select the 1st column of stock_data.
-
-stock_data[ ,1]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSAyMyAyNyAyMyAyMSAzNCAyNCAyNSAzMCAzNyAzMFxuIn0= -->
-<pre><code> [1] 23 27 23 21 34 24 25 30 37 30</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jU2VsZWN0IHRoZSAzcmQgcm93IG9mIHN0b2NrX2RhdGEuXG5cbnN0b2NrX2RhdGFbMywgXVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5cbmRwbHlyOjpjYXNlX3doZW4oXG4gIGZydWl0ID09IFwiYXBwbGVcIiAgfiBcImFscGFjYVwiLFxuICBmcnVpdCA9PSBcImJhbmFuYVwiIH4gXCJib25vYm9cIixcbiAgZnJ1aXQgPT0gXCJjaGVycnlcIiB+IFwiY2hpcG11bmtcIlxuKVxuYGBgIn0= -->
 <pre class="r"><code>
-#Select the 3rd row of stock_data.
 
-stock_data[3, ]</code></pre>
+dplyr::case_when(
+  fruit == &quot;apple&quot;  ~ &quot;alpaca&quot;,
+  fruit == &quot;banana&quot; ~ &quot;bonobo&quot;,
+  fruit == &quot;cherry&quot; ~ &quot;chipmunk&quot;
+)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MX0sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVJUVStEUUJBZHZscEJiWnIwZDBDaUh2VG93ZlRteFdEc2phekxZZ25yYnJNc1Z2OThkUmJZbG03a0FQUGV2SmszTTd3OGJlNlNUUUlBQVFRemZFY1lRdlNhcjlNSGdOQkg0RUVJc2ZsK1kzcUZnU0VYaG5pOGgvRUpybnNoVmpwRk04NitHRzh4V3ZiWmtWMnJ1aVEvRmoxTGNVSVgrYlpUN1FuUDg0NU5ZUHpHU2pFUTUwNFI1YVMxUmtmN2lsQXRGVVlIVnk3SUo3TnlmeVN2V2kxcFUreFVUVEUzY0pkb1ZjaXEyRFBXT0QxaUpmZVo3V012RUF5aTROY1pKU21KSmxtbFVQN1BPSE81MDdVVTJNaGZEV2M4Sy9hVVF5dzdZWXpMbEc0NzBhUTN0OFpobk1DYlRET04vY0V6dEpNZC93WVRIN1ZnOWpDY3ZETStnZ1Z1MkMrWTRVMkV0cXNnMjJaYWFtSjFDWlhjTXYxeWNQZ0QwMUExbGxvQ0FBQT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Wednesday","_rn_":"3"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYWxwYWNhXCIgICBcImFscGFjYVwiICAgXCJib25vYm9cIiAgIFwiY2hpcG11bmtcIiBcImNoaXBtdW5rXCJcbiJ9 -->
+<pre><code>[1] &quot;alpaca&quot;   &quot;alpaca&quot;   &quot;bonobo&quot;   &quot;chipmunk&quot; &quot;chipmunk&quot;</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>2.3.3.1</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1NlbGVjdCB0aGUgM3JkIGVsZW1lbnQgaW4gdGhlIDFzdCByb3cgb2Ygc3RvY2tfZGF0YS5cblxuc3RvY2tfZGF0YVsxLDNdXG5gYGAifQ== -->
-<pre class="r"><code>#Select the 3rd element in the 1st row of stock_data.
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG53aWZlX2FnZSA8LSBjKDI5TCwgMzBMLCAzNkwsIDMxTCwgMjJMKVxuaHVzYmFuZF9hZ2UgPC0gYygyOEwsIDM1TCwgMzJMLCAzMUwsIDI5TClcblxuYWdlX2RpZmZlcmVuY2UgPC0gaHVzYmFuZF9hZ2UgLSB3aWZlX2FnZVxuXG5hZ2VfZGlmZmVyZW5jZVxuYGBgIn0= -->
+<pre class="r"><code>
+wife_age &lt;- c(29L, 30L, 36L, 31L, 22L)
+husband_age &lt;- c(28L, 35L, 32L, 31L, 29L)
 
-stock_data[1,3]</code></pre>
+age_difference &lt;- husband_age - wife_age
+
+age_difference</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTlVMTFxuIn0= -->
-<pre><code>NULL</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIC0xICA1IC00ICAwICA3XG4ifQ== -->
+<pre><code>[1] -1  5 -4  0  7</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1F1ZXN0aW9uIDQuXG5cbiNTZWxlY3QgdGhlIGRhdGEgZnJhbWUgZnJvbSB3aXRoaW4gdGhlIGxpc3Qgb2Ygc3RvY2tzLlxuXG5zdG9ja19saXN0W1wiY1wiXVxuYGBgIn0= -->
-<pre class="r"><code>#Question 4.
 
-#Select the data frame from within the list of stocks.
-
-stock_list[&quot;c&quot;]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJGNcbiJ9 -->
-<pre><code>$c</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSVVUrRE1CQXVERFpCdHl6Wjd4aUpNWXN6Sm1ZYXN6ZGZETWE5a1FyRkViQmRTbkg2NWkvZnZNSjFZMlFrOE4zMzlianY3dnI2dkxyeFZ6NGhwRWQ2ZmZpNkVCTDNMVnhPNTRRNE5oQ0xPTVRUK0FQSEV3aTBPSUxYWDl5UytsbmNJeG8rUTN4RW5DUGVJVDRnUHYyZGNLZy8xSFhSdzlHZDFKM3BKczVxSnczMkMvYk5paEtpY1oyRjZsSm1DZjAxN0VYd0k3c0kxNVVzajN3UVZxeEZ2WGVXOEVZNGRYTGpncGJHNkdDZjBsZ0pDZEd1bTg3cEZ6UHBOb3BYcFJKeEhtMWtGc05abzEyQ1ZTVFNhTXRZM3FuaFNiRU5UQjI5SmJ2Wm5kNldUdXp0TyszNENWVTBTQ1g4Y3FhbGdkaW9USEFvWms5d3BlMmZMZGtSeGhYWDVzazBYbGM4bjE3UDhKNHN2TGdoeG40cnRodFB4M1IydUJIR1B6UE96SElLK3NFS0pDT1lzaDR5Z0wxd1pVWUJ0UXlVVU5UaytiRW9qRklQUjNiL1NjNVcxOG9DQUFBPSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RvY2tfbGlzdCRjXG5gYGAifQ== -->
-<pre class="r"><code>stock_list$c</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBMjFSVVUrRE1CQXVERFpCdHl6Wjd4aUpNWXN6Sm1ZYXN6ZGZETWE5a1FyRkViQmRTbkg2NWkvZnZNSjFZMlFrOE4zMzlianY3dnI2dkxyeFZ6NGhwRWQ2ZmZpNkVCTDNMVnhPNTRRNE5oQ0xPTVRUK0FQSEV3aTBPSUxYWDl5UytsbmNJeG8rUTN4RW5DUGVJVDRnUHYyZGNLZy8xSFhSdzlHZDFKM3BKczVxSnczMkMvYk5paEtpY1oyRjZsSm1DZjAxN0VYd0k3c0kxNVVzajN3UVZxeEZ2WGVXOEVZNGRYTGpncGJHNkdDZjBsZ0pDZEd1bTg3cEZ6UHBOb3BYcFJKeEhtMWtGc05abzEyQ1ZTVFNhTXRZM3FuaFNiRU5UQjI5SmJ2Wm5kNldUdXp0TyszNENWVTBTQ1g4Y3FhbGdkaW9USEFvWms5d3BlMmZMZGtSeGhYWDVzazBYbGM4bjE3UDhKNHN2TGdoeG40cnRodFB4M1IydUJIR1B6UE96SElLK3NFS0pDT1lzaDR5Z0wxd1pVWUJ0UXlVVU5UaytiRW9qRklQUjNiL1NjNVcxOG9DQUFBPSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["stock_prices"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["day_of_week"],"name":[2],"type":["fctr"],"align":["left"]}],"data":[{"1":"23","2":"Monday"},{"1":"27","2":"Tuesday"},{"1":"23","2":"Wednesday"},{"1":"21","2":"Thursday"},{"1":"34","2":"Friday"},{"1":"24","2":"Monday"},{"1":"25","2":"Tuesday"},{"1":"30","2":"Wednesday"},{"1":"37","2":"Thursday"},{"1":"30","2":"Friday"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
-<pre class="r"><code>NA</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInRpZHlxdWFudFwiKVxuYGBgIn0= -->
-<pre class="r"><code>install.packages(&quot;tidyquant&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYWxzbyBpbnN0YWxsaW5nIHRoZSBkZXBlbmRlbmNpZXMg4oCYaG1z4oCZLCDigJhxdWFkcHJvZ+KAmSwg4oCYem9v4oCZLCDigJh0aWR5c2VsZWN04oCZLCDigJhwbG9ncuKAmSwg4oCYbGlmZWN5Y2xl4oCZLCDigJhwYWRy4oCZLCDigJhyZWFkcuKAmSwg4oCYUGVyZm9ybWFuY2VBbmFseXRpY3PigJksIOKAmHF1YW50bW9k4oCZLCDigJhkcGx5cuKAmSwg4oCYUXVhbmRs4oCZLCDigJh0aWR5cuKAmSwg4oCYdGltZXRr4oCZLCDigJhUVFLigJksIOKAmHh0c+KAmVxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L2htc18wLjUuMS50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDEwNTYyMSBieXRlcyAoMTAzIEtCKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgMTAzIEtCXG5cbnRyeWluZyBVUkwgJ2h0dHBzOi8vY3Jhbi5yc3R1ZGlvLmNvbS9iaW4vbWFjb3N4L2VsLWNhcGl0YW4vY29udHJpYi8zLjYvcXVhZHByb2dfMS41LTcudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAzOTE3NSBieXRlcyAoMzggS0IpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAzOCBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3pvb18xLjgtNi50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDEwODkzODcgYnl0ZXMgKDEuMCBNQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDEuMCBNQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3RpZHlzZWxlY3RfMC4yLjUudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAzMjI2MDggYnl0ZXMgKDMxNSBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDMxNSBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3Bsb2dyXzAuMi4wLnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggMTMxNzggYnl0ZXMgKDEyIEtCKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgMTIgS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9saWZlY3ljbGVfMC4xLjAudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCA3NDk1OCBieXRlcyAoNzMgS0IpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCA3MyBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L3BhZHJfMC41LjAudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAzMDYzMzY0IGJ5dGVzICgyLjkgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAyLjkgTUJcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9yZWFkcl8xLjMuMS50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDc5MjY1NyBieXRlcyAoNzc0IEtCKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgNzc0IEtCXG5cbnRyeWluZyBVUkwgJ2h0dHBzOi8vY3Jhbi5yc3R1ZGlvLmNvbS9iaW4vbWFjb3N4L2VsLWNhcGl0YW4vY29udHJpYi8zLjYvUGVyZm9ybWFuY2VBbmFseXRpY3NfMS41LjMudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAyODU3MTk2IGJ5dGVzICgyLjcgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAyLjcgTUJcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9xdWFudG1vZF8wLjQtMTUudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCA5NjI5MzEgYnl0ZXMgKDk0MCBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDk0MCBLQlxuXG50cnlpbmcgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy42L2RwbHlyXzAuOC4zLnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggNjg1MDc5NCBieXRlcyAoNi41IE1CKVxuPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmRvd25sb2FkZWQgNi41IE1CXG5cbnRyeWluZyBVUkwgJ2h0dHBzOi8vY3Jhbi5yc3R1ZGlvLmNvbS9iaW4vbWFjb3N4L2VsLWNhcGl0YW4vY29udHJpYi8zLjYvUXVhbmRsXzIuMTAuMC50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDU5NTQ2IGJ5dGVzICg1OCBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDU4IEtCXG5cbnRyeWluZyBVUkwgJ2h0dHBzOi8vY3Jhbi5yc3R1ZGlvLmNvbS9iaW4vbWFjb3N4L2VsLWNhcGl0YW4vY29udHJpYi8zLjYvdGlkeXJfMS4wLjAudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAxMDE1NTAwIGJ5dGVzICg5OTEgS0IpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCA5OTEgS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi90aW1ldGtfMC4xLjIudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAyODI0NjU5IGJ5dGVzICgyLjcgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAyLjcgTUJcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi9UVFJfMC4yMy01LnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggNTE5MDE0IGJ5dGVzICg1MDYgS0IpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCA1MDYgS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi94dHNfMC4xMS0yLnRneidcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24veC1nemlwJyBsZW5ndGggOTUwNjE0IGJ5dGVzICg5MjggS0IpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCA5MjggS0JcblxudHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNi90aWR5cXVhbnRfMC41LjgudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAzMjk1ODI4IGJ5dGVzICgzLjEgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAzLjEgTUJcbiJ9 -->
-<pre><code>also installing the dependencies ‘hms’, ‘quadprog’, ‘zoo’, ‘tidyselect’, ‘plogr’, ‘lifecycle’, ‘padr’, ‘readr’, ‘PerformanceAnalytics’, ‘quantmod’, ‘dplyr’, ‘Quandl’, ‘tidyr’, ‘timetk’, ‘TTR’, ‘xts’
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/hms_0.5.1.tgz'
-Content type 'application/x-gzip' length 105621 bytes (103 KB)
-==================================================
-downloaded 103 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/quadprog_1.5-7.tgz'
-Content type 'application/x-gzip' length 39175 bytes (38 KB)
-==================================================
-downloaded 38 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/zoo_1.8-6.tgz'
-Content type 'application/x-gzip' length 1089387 bytes (1.0 MB)
-==================================================
-downloaded 1.0 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/tidyselect_0.2.5.tgz'
-Content type 'application/x-gzip' length 322608 bytes (315 KB)
-==================================================
-downloaded 315 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/plogr_0.2.0.tgz'
-Content type 'application/x-gzip' length 13178 bytes (12 KB)
-==================================================
-downloaded 12 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/lifecycle_0.1.0.tgz'
-Content type 'application/x-gzip' length 74958 bytes (73 KB)
-==================================================
-downloaded 73 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/padr_0.5.0.tgz'
-Content type 'application/x-gzip' length 3063364 bytes (2.9 MB)
-==================================================
-downloaded 2.9 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/readr_1.3.1.tgz'
-Content type 'application/x-gzip' length 792657 bytes (774 KB)
-==================================================
-downloaded 774 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/PerformanceAnalytics_1.5.3.tgz'
-Content type 'application/x-gzip' length 2857196 bytes (2.7 MB)
-==================================================
-downloaded 2.7 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/quantmod_0.4-15.tgz'
-Content type 'application/x-gzip' length 962931 bytes (940 KB)
-==================================================
-downloaded 940 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/dplyr_0.8.3.tgz'
-Content type 'application/x-gzip' length 6850794 bytes (6.5 MB)
-==================================================
-downloaded 6.5 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/Quandl_2.10.0.tgz'
-Content type 'application/x-gzip' length 59546 bytes (58 KB)
-==================================================
-downloaded 58 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/tidyr_1.0.0.tgz'
-Content type 'application/x-gzip' length 1015500 bytes (991 KB)
-==================================================
-downloaded 991 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/timetk_0.1.2.tgz'
-Content type 'application/x-gzip' length 2824659 bytes (2.7 MB)
-==================================================
-downloaded 2.7 MB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/TTR_0.23-5.tgz'
-Content type 'application/x-gzip' length 519014 bytes (506 KB)
-==================================================
-downloaded 506 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/xts_0.11-2.tgz'
-Content type 'application/x-gzip' length 950614 bytes (928 KB)
-==================================================
-downloaded 928 KB
-
-trying URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.6/tidyquant_0.5.8.tgz'
-Content type 'application/x-gzip' length 3295828 bytes (3.1 MB)
-==================================================
-downloaded 3.1 MB</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy96dy9ocF96NHQ2OTUxajl3NTNfNDRxeXdxYzAwMDAwZ3AvVC8vUnRtcDV5R25HTy9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
-<pre><code>
-The downloaded binary packages are in
-    /var/folders/zw/hp_z4t6951j9w53_44qywqc00000gp/T//Rtmp5yGnGO/downloaded_packages</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5cXVhbnQpXG5gYGAifQ== -->
-<pre class="r"><code>library(tidyquant)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBsdWJyaWRhdGVcblxuQXR0YWNoaW5nIHBhY2thZ2U6IOKAmGx1YnJpZGF0ZeKAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBkYXRlXG5cbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogUGVyZm9ybWFuY2VBbmFseXRpY3NcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogeHRzXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IHpvb1xuXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYem9v4oCZXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0cyBhcmUgbWFza2VkIGZyb20g4oCYcGFja2FnZTpiYXNl4oCZOlxuXG4gICAgYXMuRGF0ZSwgYXMuRGF0ZS5udW1lcmljXG5cblJlZ2lzdGVyZWQgUzMgbWV0aG9kIG92ZXJ3cml0dGVuIGJ5ICd4dHMnOlxuICBtZXRob2QgICAgIGZyb21cbiAgYXMuem9vLnh0cyB6b28gXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDigJhQZXJmb3JtYW5jZUFuYWx5dGljc+KAmVxuXG5UaGUgZm9sbG93aW5nIG9iamVjdCBpcyBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmdyYXBoaWNz4oCZOlxuXG4gICAgbGVnZW5kXG5cbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogcXVhbnRtb2RcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogVFRSXG5SZWdpc3RlcmVkIFMzIG1ldGhvZCBvdmVyd3JpdHRlbiBieSAncXVhbnRtb2QnOlxuICBtZXRob2QgICAgICAgICAgICBmcm9tXG4gIGFzLnpvby5kYXRhLmZyYW1lIHpvbyBcblZlcnNpb24gMC40LTAgaW5jbHVkZWQgbmV3IGRhdGEgZGVmYXVsdHMuIFNlZSA/Z2V0U3ltYm9scy5cblx1MDAxYlszODs1OzExN23ilZDilZBcdTAwMWJbMzltIFx1MDAxYlszODs1OzExN21OZWVkIHRvIExlYXJuIHRpZHlxdWFudD9cdTAwMWJbMzltIFx1MDAxYlszODs1OzExN23ilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZDilZBcdTAwMWJbMzltXHUwMDFiWzM4OzU7NDNtXG5CdXNpbmVzcyBTY2llbmNlIG9mZmVycyBhIDEtaG91ciBjb3Vyc2UgLSBMZWFybmluZyBMYWIgIzk6IFBlcmZvcm1hbmNlIEFuYWx5c2lzICYgUG9ydGZvbGlvIE9wdGltaXphdGlvbiB3aXRoIHRpZHlxdWFudCFcblx1MDAxYlszOW1cdTAwMWJbMzg7NTs0M208XC8+IExlYXJuIG1vcmUgYXQ6IGh0dHBzOi8vdW5pdmVyc2l0eS5idXNpbmVzcy1zY2llbmNlLmlvL3AvbGVhcm5pbmctbGFicy1wcm8gPFwvPlx1MDAxYlszOW1cbiJ9 -->
-<pre><code>Loading required package: lubridate
-
-Attaching package: ‘lubridate’
-
-The following object is masked from ‘package:base’:
-
-    date
-
-Loading required package: PerformanceAnalytics
-Loading required package: xts
-Loading required package: zoo
-
-Attaching package: ‘zoo’
-
-The following objects are masked from ‘package:base’:
-
-    as.Date, as.Date.numeric
-
-Registered S3 method overwritten by 'xts':
-  method     from
-  as.zoo.xts zoo 
-
-Attaching package: ‘PerformanceAnalytics’
-
-The following object is masked from ‘package:graphics’:
-
-    legend
-
-Loading required package: quantmod
-Loading required package: TTR
-Registered S3 method overwritten by 'quantmod':
-  method            from
-  as.zoo.data.frame zoo 
-Version 0.4-0 included new data defaults. See ?getSymbols.
-[38;5;117m══[39m [38;5;117mNeed to Learn tidyquant?[39m [38;5;117m══════════════════════════════════════════════════════[39m[38;5;43m
-Business Science offers a 1-hour course - Learning Lab #9: Performance Analysis &amp; Portfolio Optimization with tidyquant!
-[39m[38;5;43m&lt;/&gt; Learn more at: https://university.business-science.io/p/learning-labs-pro &lt;/&gt;[39m</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmJzIDwtdHFfZ2V0KFwiUkJTLkxcIiwgZ2V0ID0gXCJzdG9jay5wcmljZXNcIiwgZnJvbSA9IFwiMjAxOS0wMS0wMVwiLCB0byA9IFwiMjAxOS0xMC0wMVwiKVxuYGBgIn0= -->
-<pre class="r"><code>rbs &lt;-tq_get(&quot;RBS.L&quot;, get = &quot;stock.prices&quot;, from = &quot;2019-01-01&quot;, to = &quot;2019-10-01&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmJzWyAsYyhcImRhdGVcIixcImNsb3NlXCIpXVxuYGBgIn0= -->
-<pre class="r"><code>rbs[ ,c(&quot;date&quot;,&quot;close&quot;)]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTkwfSwicmRmIjoiSDRzSUFBQUFBQUFBQTEyWGEyZ2NWUlRISjhsdUpCRkxwRVVRUlFSQkVFeFFVcW9GMFVXTEtQaEJmRUFFd1c3VDNlek0zSjBaZHJldGp6Uk5taVpOdG1tVE5EVk44MmlTSmsyVDV0azBwazN6SUtDSWhTS0s0RWNSRkVFb3BTQUlnaVRPNVA3TzJ1eUg1TXovL0gvM3pMMW43dXhsM3R0WFZWbGFWV29ZUnBGUlZPei9EL3VYUnZqREQ5NHNmOWt3UW9XK0tEQkNSa2tRUC9YdG5mNkZueXk0cDJQT0xEbVNpbnFmcEdKUmxXZUVEa1RUTVhLUGJPVU5ZNGYvdDBFdXVGNkwvUGg1ZlhCZlA2N3IrSVZCUk5laWF5TkUrRnI4bytpajZEcjRPdmc2L0dQb1k2TGg2K0hyOFJ2UURhTGhHK0NQNHg5SE42SWI0UnZoRy9GUG9FK2dtK0NiNEp2d205SE5vdUZQd3AvRWIwRzNpSVp2Z1cvRmIwVm4wVm40TEh3Vy94VDZGTG9OdmcyK0RmODArclJvK0RQd1ovRGIwZTJpNGR2aE8vQTcwSjNvVHZoTytFNzhzK2l6NkM3NEx2Z3UvSFBvYzZMaHY0VHZ4dS9HNzhZL2ozOGUzWVB1Z2UrQjc4Ry9RT3lGNjRYcmhldEQ5NG1HNzRmdnh4OUFENGlHSDRDL2lEOG9FVzRRYmhCdUNEMkVIb1lmaGgvR3Y0UytKQnArQkg0RWZ4UTlLaHArRlA0eS9tWDBHSG9NZmd4K0RQOEsrZ3A2SEg0Y2ZoeC9BajBoR3Y0cS9GWDhTZlNrYVBoSitDbjhLZlEwZWhwK0duNGFmd1k5ZzU2Rm40V2Z4WjlEejRtR3Z3Wi9EWDhlUFM4YWZoNytPdjUxOUFKNkFYNEJmZ0gvSytJaTNDTGNJdHdOOUEzUjhEZmhiK0l2b1pkRXd5L0IzOEsvaFY1R0w4TXZ3eS9qcjZCWDBLdndxL0NyK0d2b3RTMXQ2TE9nVUVUZVNST3VWdEYwMnI4b2V5QVoyaGZOQkFkSmNIRG9ROFBlV2ZuYWQrcHV4QnJSMFI2TDczL2lkamFpZE1tSTJudGg4UGM5aHlOMi81MzFsN3AyUlZTUjV0UWV6U1hMNEZhMG40UlBEdW04TTBlVS9GOTZmUEkzSFoybjhVMzhIN1JPZm8wZjEvZHhudFQxblZxaXg3aGZkWFNwN3pCdnFaOWNJbDlDZkpkeGxkUy96L2g2NGorYTg1aVgrNGUrdjFkQW5uRmVSUHRlUnMvSDZ5TXZlcFQ0S3VPcjROOGkwamZ2VWVvK0QvOCtkUzR5N2c1NSt1TEpmRHFZSDMxeGkrblR2L1RuTG5tRnZyKzlYODdmbW5mcGk4dnpjK203ZXhoZjduTWJqdjNoUFVWOG0va25tSjlFNlFQUHozc0YvVEQxNlo4OEw5a0h1ZjNCT3BQTnhFWGlmampxSmxsM2tqNG81aVA3VVgzTGZxWXZLczArbC93THVwNzlIUHRjOUdQYXo3MGY3Q2Y3V1oyM21JL0YvT3gzZEgyTDUyVk5FWGx1TnUrTnpYd3Q1bWY5akc1RE15K0w1MlRMZU40M2krZG0wWjljM1RlSXJOLytqTGllVjRmK0t2YWZZcHk4NTRyMUtONEh4VG9WZGRSRVhuK0h5TE1PMVVnOTlvM3FRamZuK2J6SGFvNTV0VEpmOW9IOWpPYk1qeldYbU5IanpjYzFaOUl2azMxdGNoK1Q4ZVpIbWt0OHI4ZkZkMnMrL28yT05idUk5Q0hPZXVMVWkvK2l4OVdFeVArazY4ZnZrYThnOGo3SE45RDhUdFJ3M3hyV20yRGVDUTZUQkw4ekNka0hzcTQvaWZUTHBJOFc3NGxGdnl6MnUwbi9UWS9JNzdRbGZlQjVtM3BmNXg4U1RqUVprME9pVUE2Smc4RWhrVHRGM09EVEl4Z1YyalMybnlhbFBoaXRpS2Y4R25sMVMxTHVrUXFwblR1bE5qYzNYemUyRHA5dDhFT3VsekZkeDBjTGd5K2pjTjVkQ2xKNWliSkRUbEQ2WUhsMTRwQmpsNys0TjVpS29iK0tET1AvTDZTMUI2NEw5VDNEc29Rd3RZcGpUbzNwNUZhcm9nZGlDckhEWDhQV0VpcThsT2xrWk0xK05sMlJjVE5SNFVxclhTVVpmYkp1L0FjalRLK3JFUTRBQUE9PSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["date"],"name":[1],"type":["date"],"align":["right"]},{"label":["close"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"2019-01-02","2":"216.60"},{"1":"2019-01-03","2":"213.10"},{"1":"2019-01-04","2":"221.20"},{"1":"2019-01-07","2":"224.00"},{"1":"2019-01-08","2":"225.80"},{"1":"2019-01-09","2":"220.90"},{"1":"2019-01-10","2":"224.10"},{"1":"2019-01-11","2":"225.70"},{"1":"2019-01-14","2":"232.50"},{"1":"2019-01-15","2":"229.90"},{"1":"2019-01-16","2":"233.80"},{"1":"2019-01-17","2":"237.00"},{"1":"2019-01-18","2":"245.50"},{"1":"2019-01-21","2":"241.80"},{"1":"2019-01-22","2":"239.60"},{"1":"2019-01-23","2":"239.10"},{"1":"2019-01-24","2":"241.00"},{"1":"2019-01-25","2":"243.30"},{"1":"2019-01-28","2":"238.50"},{"1":"2019-01-29","2":"238.10"},{"1":"2019-01-30","2":"243.20"},{"1":"2019-01-31","2":"240.90"},{"1":"2019-02-01","2":"243.90"},{"1":"2019-02-04","2":"243.50"},{"1":"2019-02-05","2":"247.00"},{"1":"2019-02-06","2":"249.80"},{"1":"2019-02-07","2":"240.00"},{"1":"2019-02-08","2":"239.10"},{"1":"2019-02-11","2":"237.80"},{"1":"2019-02-12","2":"240.30"},{"1":"2019-02-13","2":"242.50"},{"1":"2019-02-14","2":"241.60"},{"1":"2019-02-15","2":"247.50"},{"1":"2019-02-18","2":"252.00"},{"1":"2019-02-19","2":"255.80"},{"1":"2019-02-20","2":"258.00"},{"1":"2019-02-21","2":"255.20"},{"1":"2019-02-22","2":"256.10"},{"1":"2019-02-25","2":"259.20"},{"1":"2019-02-26","2":"260.00"},{"1":"2019-02-27","2":"263.30"},{"1":"2019-02-28","2":"265.70"},{"1":"2019-03-01","2":"263.30"},{"1":"2019-03-04","2":"266.30"},{"1":"2019-03-05","2":"259.90"},{"1":"2019-03-06","2":"261.50"},{"1":"2019-03-07","2":"260.50"},{"1":"2019-03-08","2":"257.00"},{"1":"2019-03-11","2":"257.10"},{"1":"2019-03-12","2":"258.80"},{"1":"2019-03-13","2":"261.20"},{"1":"2019-03-14","2":"265.90"},{"1":"2019-03-15","2":"268.80"},{"1":"2019-03-18","2":"269.00"},{"1":"2019-03-19","2":"270.40"},{"1":"2019-03-20","2":"265.00"},{"1":"2019-03-21","2":"248.90"},{"1":"2019-03-22","2":"248.20"},{"1":"2019-03-25","2":"247.90"},{"1":"2019-03-26","2":"247.40"},{"1":"2019-03-27","2":"251.40"},{"1":"2019-03-28","2":"247.50"},{"1":"2019-03-29","2":"247.00"},{"1":"2019-04-01","2":"247.70"},{"1":"2019-04-02","2":"248.30"},{"1":"2019-04-03","2":"253.90"},{"1":"2019-04-04","2":"254.10"},{"1":"2019-04-05","2":"251.70"},{"1":"2019-04-08","2":"252.50"},{"1":"2019-04-09","2":"254.30"},{"1":"2019-04-10","2":"253.20"},{"1":"2019-04-11","2":"257.90"},{"1":"2019-04-12","2":"260.60"},{"1":"2019-04-15","2":"262.50"},{"1":"2019-04-16","2":"262.50"},{"1":"2019-04-17","2":"263.30"},{"1":"2019-04-18","2":"262.40"},{"1":"2019-04-23","2":"259.80"},{"1":"2019-04-24","2":"256.70"},{"1":"2019-04-25","2":"250.00"},{"1":"2019-04-26","2":"240.00"},{"1":"2019-04-29","2":"241.00"},{"1":"2019-04-30","2":"239.60"},{"1":"2019-05-01","2":"239.20"},{"1":"2019-05-02","2":"236.20"},{"1":"2019-05-03","2":"237.70"},{"1":"2019-05-07","2":"235.00"},{"1":"2019-05-08","2":"235.20"},{"1":"2019-05-09","2":"232.20"},{"1":"2019-05-10","2":"232.90"},{"1":"2019-05-13","2":"226.30"},{"1":"2019-05-14","2":"229.90"},{"1":"2019-05-15","2":"230.20"},{"1":"2019-05-16","2":"231.90"},{"1":"2019-05-17","2":"227.60"},{"1":"2019-05-20","2":"222.20"},{"1":"2019-05-21","2":"225.50"},{"1":"2019-05-22","2":"217.30"},{"1":"2019-05-23","2":"217.50"},{"1":"2019-05-24","2":"216.70"},{"1":"2019-05-28","2":"216.60"},{"1":"2019-05-29","2":"215.10"},{"1":"2019-05-30","2":"217.20"},{"1":"2019-05-31","2":"213.70"},{"1":"2019-06-03","2":"212.20"},{"1":"2019-06-04","2":"218.40"},{"1":"2019-06-05","2":"214.40"},{"1":"2019-06-06","2":"213.40"},{"1":"2019-06-07","2":"214.50"},{"1":"2019-06-10","2":"216.10"},{"1":"2019-06-11","2":"216.20"},{"1":"2019-06-12","2":"213.90"},{"1":"2019-06-13","2":"214.70"},{"1":"2019-06-14","2":"212.40"},{"1":"2019-06-17","2":"214.20"},{"1":"2019-06-18","2":"215.00"},{"1":"2019-06-19","2":"222.50"},{"1":"2019-06-20","2":"217.70"},{"1":"2019-06-21","2":"215.70"},{"1":"2019-06-24","2":"215.20"},{"1":"2019-06-25","2":"216.10"},{"1":"2019-06-26","2":"218.10"},{"1":"2019-06-27","2":"218.30"},{"1":"2019-06-28","2":"219.80"},{"1":"2019-07-01","2":"222.00"},{"1":"2019-07-02","2":"222.50"},{"1":"2019-07-03","2":"223.60"},{"1":"2019-07-04","2":"224.50"},{"1":"2019-07-05","2":"226.10"},{"1":"2019-07-08","2":"225.80"},{"1":"2019-07-09","2":"228.20"},{"1":"2019-07-10","2":"228.00"},{"1":"2019-07-11","2":"229.70"},{"1":"2019-07-12","2":"230.00"},{"1":"2019-07-15","2":"229.30"},{"1":"2019-07-16","2":"229.90"},{"1":"2019-07-17","2":"229.00"},{"1":"2019-07-18","2":"230.70"},{"1":"2019-07-19","2":"228.10"},{"1":"2019-07-22","2":"228.50"},{"1":"2019-07-23","2":"228.60"},{"1":"2019-07-24","2":"228.20"},{"1":"2019-07-25","2":"228.10"},{"1":"2019-07-26","2":"227.90"},{"1":"2019-07-29","2":"229.50"},{"1":"2019-07-30","2":"220.30"},{"1":"2019-07-31","2":"217.00"},{"1":"2019-08-01","2":"217.10"},{"1":"2019-08-02","2":"202.90"},{"1":"2019-08-05","2":"197.45"},{"1":"2019-08-06","2":"200.80"},{"1":"2019-08-07","2":"204.40"},{"1":"2019-08-08","2":"207.50"},{"1":"2019-08-09","2":"204.60"},{"1":"2019-08-12","2":"201.00"},{"1":"2019-08-13","2":"202.80"},{"1":"2019-08-14","2":"198.45"},{"1":"2019-08-15","2":"177.65"},{"1":"2019-08-16","2":"182.15"},{"1":"2019-08-19","2":"184.65"},{"1":"2019-08-20","2":"184.50"},{"1":"2019-08-21","2":"181.90"},{"1":"2019-08-22","2":"183.50"},{"1":"2019-08-23","2":"182.95"},{"1":"2019-08-27","2":"184.15"},{"1":"2019-08-28","2":"182.60"},{"1":"2019-08-29","2":"183.45"},{"1":"2019-08-30","2":"185.45"},{"1":"2019-09-02","2":"186.25"},{"1":"2019-09-03","2":"183.95"},{"1":"2019-09-04","2":"184.05"},{"1":"2019-09-05","2":"190.45"},{"1":"2019-09-06","2":"188.10"},{"1":"2019-09-09","2":"192.80"},{"1":"2019-09-10","2":"197.75"},{"1":"2019-09-11","2":"199.80"},{"1":"2019-09-12","2":"197.90"},{"1":"2019-09-13","2":"208.80"},{"1":"2019-09-16","2":"207.30"},{"1":"2019-09-17","2":"204.20"},{"1":"2019-09-18","2":"204.50"},{"1":"2019-09-19","2":"208.00"},{"1":"2019-09-20","2":"213.50"},{"1":"2019-09-23","2":"208.90"},{"1":"2019-09-24","2":"205.00"},{"1":"2019-09-25","2":"203.50"},{"1":"2019-09-26","2":"204.90"},{"1":"2019-09-27","2":"209.00"},{"1":"2019-09-30","2":"207.60"},{"1":"2019-10-01","2":"201.50"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[190]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3Vic2V0KHJicywgY2xvc2U+bWVhbihjbG9zZSkpXG5gYGAifQ== -->
-<pre class="r"><code>subset(rbs, close&gt;mean(close))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NywibnJvdyI6OTZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBMTFZYTFSVTF4Vyt5TU5BR2lWb0hwUW9ZMVd5U0F2TGFxSlFJcHp4bFdxc3NVWkYrNUFaM2pQY2U4OEZCdkFOQ29nQ0tnYURpZzhtV2RhbElTWStsdFkzV0sySkZ1T3J1bHBxQTRsb2ZVU2xTNDFMcTA3dm5QdnRpOHdQM2ZPZDg1MTk5dDVuNzMwT2Q4cVlHY05DWm9SSWt1UXYrUWZwL3dmcVA2WEFhVlBIeGNSSlVrQVBIZmhKQVZLd1Y4N1dwL3ZvUDNycXYrL284dm5KNEtJOHU1YVNsMkdYZlNZQ1V1MzVHUmg3U1l4TFVpLzkzek9NZVgvYjJMa0ZKZDU5ZGRsc3lJVVNKSVBFZkRGd01XSHdTOEF2d2Z3aTRFV0V3VjhFL21MTUx3WXVCUzRGdnhUOFVzeVhBWmNCbDROZkRuNDU1cGNBTHlFTWZnWDRGWmhmQ3J5VU1QaEx3VitHK1dYQWxjQ1Y0RmVDWDRuNUt1QXE0R3J3cThHdnh2eHk0T1dFd1Y4Qi9nck1yd1JlU1JqOGxlRFhZTDRHZUJYd0t2QlhnYjhLOHg4QmZ3UmNDMzR0K0xXWVh3MjhtakQ0SDROZmgvazZ6TmRoZmczbTF3Q3ZCVjRML2xydzEySitIV1E5ZVBYZzFZTzNuaVI0RzhEYmh2SFBnRC9EdWtiZ1JzTGdOV0w5NTVEYndkc08zaGVDSnhtMTBZT0FUK1VGcHNuMi9IejlSK2h6Z3dGajdDNXZZWGtMeVNnaU9YcGRROGZ3UXFaOE9DenBhL2tISnYrWWFZczRXY25rR3hnSFZyY0JIek40U2t0TDg0amF2a3pwTkl4VDNaRHhCazk5MVZpbm5BUit3K0NyMkUrVmdhc2hhdzI5UEJqN1hNRStsNkRubm9IVlg0QWZEajNZbHc4M2VMelFrRm9RWkJUR3J3RWJvV0phWDBPUGhuWGFURU9mMW96NUttTS9iVE40c2VCWndZdkFQSTFQeGpyU2x3bEo2ODlpSG41cFB4ampuT3lmQ0wvZ0p4OElmK0UvVCtzK3poRmZIdFRkYi81UHd6Nk8vYmdEZUFQMm8zMHZ3QTdvMDJiQjNsejRWd0o3NThQK1JSaVBnOTUxaUw4RjU0NjRxb2kzc2gvbmlQTlY2akNPYzFhWXdWZUlqL3lRcHlQL2RpTWZ0d0NESnkrQjNPc2o2M3d3NG1YeXgwRWlqMlVqWG1ZZEtQRER0QS94VkI3QlQ4Uk5SZjZyUStBdjRtL21aVHZHNTJBZDhTamZhUnh4VldHdmlqcmk3K0o4U045d0h6c3NQdnB4VG53WThvTE8vUW5PTGJGN0hXaXdSMHZBdVkvSHVWSytIOEs2NDVCVUR6aFB6UTVaNWxNL3BIY3JaRGJrVWZEUkwzS1JiN205c0E1K1VYMXlHK3hIUFZKZGNNU2RJNDRjL1lyaXhORlh6UHp1N0I0SFRuNkVZaHg5amZMWnpIL0s4M3pFNHhOZzN6cEFueVA5S3ZKRlJUek44OEYrNm1qa0ZmcWhncm8zOHd6NXFWQytvajVsbktmaUQ3emJaeHo1SjUrQXhMaTVIdmJKVjN6V2srd1E4MllkeU1ndk9kUEhEckwzYlBlOFY5QUhGTlNwQWp0VTVLTjVYK3pBZXNTVjhsbDUwajNQZmV2RTVGRWZvVGpCZm9YcUV2Y0IzUmVjemhuN2NlcXI4SU5mN3Q0UHRaOUFEc0Q1SXU4MERmbEI1MDk5RjMzRXhGUnZ1TCswNk83ejVuMndIbm1GUE5BUUx3M25ycUlPekQ0RFAxWFVKZDBIMUMvTXZFTitxNS9ETCtRYjJXbldCL29zWHdhTXVIS2NqL1lpN0tQNzhIMWd1aGNRWnpOZTFQOFFSd1Z4Ti9PYjhuMXY5L3cyODU3eUJIRXo4eFhuWmZadDVJT01jNUQ3WUI3M201blA2Sjh5L0RMNWRCK2diazM1aDI3elpoMlFIekxpcnNSM3Ixc1Y4YUwzRHIxUDZOMWk5bW5ZUjNWRDlhQWlIOHgzRWQwSHlEZTZSemk5cHlTc3AzY1IrckdLdUttVHNRN3hOTytURWtqVWtRYTd6UGVRSDhheFRtUElBeGZPbC9LVk1MMW42RjZaQWY2dklSRTM3V1hvUlgvVzBLKzFUVmpYNHZNdUludHFZQi9sS2VVWDlRbnE3OVFucUE0UUx4VjluZDZSL0pEUC9VSHZKTm9IK2NuUnY3VCtrSFF2MGoxR2t1SkE5WXg4bzdyaGlKLzVIa0s4emZ5NDVsTUhWQmMyOEtDWCtycjVMb0lmWnArbk92RjlENkVQbU84Y1dvZThsZEUvWlBndjEvcThrNHk4cGpxd0ZvV1ZlRS9JbXZuZ3RGZXpkZmFzVTE2UHJLNmdkb0Z6VHptSGVLVTZSL1o2YnVYTHhGOWYxb3daOVY2UHJHbkh2aFQ4M1BrTkFtZE04djR4ci9NL2JSRGo2c0RkWWp5M2RVKzd3TE1peEh4V28vaW9ZSldUbXdRdnErS0taT3ozdHBEOEg3OHg5aStLRmpKcjNoMjNHRS93RTNweW1qeENiK0daTVR1RXZmVnpCWjRYZDFuNG94MHRGYko0N2xhaFAvUEdQaUV6dHNVTC9RVk43MHdXK3QzQm9RTGZPK09ObUZWNUdGdmlsZG4zaHdwZTBRZVB4SDU2dk1YNHZOdWJOVEYrZFlLd1IyN1ZoSngvNEhLb1llZCtnYlVoNndYT3MvVVcvTnpESWlPdGpvZlRiTWI2dVdJOFg3NGs5TTdaK2t4SXB4UW40dXdjbENIMEZKeXZNL2IvMzA0UmgzbjJ0NFRkQmM0S2NTNkZPUmVFTEhnWUl2UzVHcDhhZHQ2TUYvN3lneDBDSzY4SGluMnpVNDhMblBkdWxSSFBrR3loUDkyOVJlQzVmeFovRFZ0VEl4SUVMM1hQV01PZm5hbkNMdTNOT2hIdi9ITWp4YjVsd3c1dUZmcm1uUmIrNVo5ZFkvZzc1cjdCYzMwbDlEa2ROVUxQZ25aUkNWWiszQ0xHSFVzZkNUdXpOODBVNDJsT0puaXo0bzZLL2FhSFBqTGljaTFWakR1SDNCWDJwbldXaVBXMkpxZFk3OHFKRVBha2o5Z21jT3FueHdRLy9XeTRjVTVSWVVKL2FzMEVJdzVhdmxldlpMNkwwbzY0RDBTK3orU3cyZTZhbUhiOWZyRTNqZGozZHlaM09pek5qdXRNZWZ5RzUxYlBDWHBkdTJ5RFlvS1lZdjJTcGVTNG1USzBWK1NDL0pOTVVmS0tPdzU5d1pROXllMVJZNjh5SlhLaSt5K0x2MkpLMk4vYXpxZjFac3F1RVEzYkZ2Wmhpbk5LVXRiOXkwejVPanhKanFwbnlzRzFLVUUvcnRiL2JwYUtiMXVpOWZkK2hhVjhaemxUSmcxaDhZMzN1dlFINTFoY04xY3dKYm5HczJhUWl5a2Jwbm11WFZ6T2xKSzNwWDNWbTVrYTk0bjd6T3QrVFAzclJEWWg3NWIrZDhZcmxoV3YrT24zUTZ2bDN5ZkM5ZmZCaHcwSHhyN0krTmlDNXNJRjcrajk4SThXdVNLTThhWVVxZkdoazJsOVJpZVYvL1lsL2IxOElyTEJiMThYSGhYVlZPSFErOTZoUkJFZmZtZFVpbVhBQzR4LzQybXZ2THViY2Z1YXR2QkxPWXluNzR1czJ6UlMvN3Z4WDU2QTVJV01kM3duNHFjbFhFdXFIMytNYVk1NHQxTWR4alI1Wmx2cmlTcW1MVTRvM3NoZlpsck1SZVkvZUJKVFd5cEtuaDYxNjM4di9jN3oxbXMvMTk4NWh0M3FSbjliME5tTGpFZnNqOVMrWGNsVWQyeks0NFQxVEsxSmJoZzRianBUdDVReFdXcGw2djV5VDc5Ri8yWGNlYlBwU2VzdXhuTlowNVVkaVl3UGp2ZGM2dlV4NDRtck5qMmFxc2VscU00OXJXQUI0MU9QV0ZvOFAyUDhocnM0ODdyTXRNalYwdENwLzJIYXlFYlA2Y2J3TGpraHVXbnppZjc2UGZCcThZVUhlNWtXZHAzOVB2NTcvYjdaYUV0NzdVMm0zclZKUzBZYzFzOFg3NER6NzBrQnZ6ekNsRC9kYnRNRHE3K2ZSMG5OblJhbS9DcSsrZGJ0eDB4eEhHNDc2YWxsU3QvaHRxdjlvcGp5MCtxa1JQOWNKaDhzYmJ2WCtZeko1M1lVRDJ4WndlUzhyVW1UVG1Ycjc1dG9LZkhtQUNidjhvLzBQemRPZi85OFkxbDJaVFNUNVNtMkJ4MzltRnh3SWZMMG9PK1luTExGSFRhem9XdmQ5TUZOMjZQWE1ibktjK1NwcE9zZjk0RjB0ODk0Sm8rZkszMi9zSGVYbm93bkpXWDl2L1g5dUtUYWxRejZ1TlNUUGk2bGV6OHU0VGZYTWxUNm5lM0l5c1p2ZjVrWGRYMmc0dm5FRHlya2NvRkM2QVY3dXJNZzM1V1JibXdiNEpHNmY4WUswWGV5eDJibTZVYjRHQmFjeDR0aXlUano4NWpINC9FVytUTWZjayt1dVJ4YzFhazl2SitvQTMxMjhjdnpHUWd0VUwycTAyUFNzZ3ZVbkppaDNvWVNJaG1mcHlXcDYxTzE3Ym5mUFkwOUE4bUZRSEk0UTgxeXFPUndvR3hQelpBQmV1aytDQmRpdFR5SDZpS2Y5ZEg4V0JkMzJZa1hrc1psR2pFKzZUMzdQOE9iYzhhYUZ3QUEifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["date"],"name":[1],"type":["date"],"align":["right"]},{"label":["open"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["high"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["close"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["volume"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["adjusted"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"2019-01-14","2":"225.3","3":"233.00","4":"225.0","5":"232.5","6":"24193037","7":"227.1170"},{"1":"2019-01-15","2":"234.6","3":"236.60","4":"227.2","5":"229.9","6":"12037742","7":"224.5772"},{"1":"2019-01-16","2":"231.7","3":"235.70","4":"230.6","5":"233.8","6":"25554082","7":"228.3869"},{"1":"2019-01-17","2":"231.3","3":"239.80","4":"229.0","5":"237.0","6":"20999692","7":"231.5128"},{"1":"2019-01-18","2":"239.7","3":"247.40","4":"238.5","5":"245.5","6":"18654883","7":"239.8160"},{"1":"2019-01-21","2":"245.3","3":"246.10","4":"240.2","5":"241.8","6":"15977314","7":"236.2017"},{"1":"2019-01-22","2":"238.1","3":"241.50","4":"236.8","5":"239.6","6":"16534694","7":"234.0526"},{"1":"2019-01-23","2":"238.4","3":"240.20","4":"237.2","5":"239.1","6":"11191507","7":"233.5642"},{"1":"2019-01-24","2":"239.5","3":"241.40","4":"238.2","5":"241.0","6":"10362233","7":"235.4202"},{"1":"2019-01-25","2":"245.0","3":"247.00","4":"241.6","5":"243.3","6":"18336246","7":"237.6670"},{"1":"2019-01-28","2":"241.8","3":"243.80","4":"238.1","5":"238.5","6":"11169800","7":"232.9781"},{"1":"2019-01-29","2":"240.7","3":"241.50","4":"237.5","5":"238.1","6":"16061689","7":"232.5874"},{"1":"2019-01-30","2":"238.3","3":"243.40","4":"235.6","5":"243.2","6":"15801755","7":"237.5693"},{"1":"2019-01-31","2":"240.9","3":"243.80","4":"239.8","5":"240.9","6":"18721630","7":"235.3225"},{"1":"2019-02-01","2":"241.3","3":"243.90","4":"239.9","5":"243.9","6":"15921368","7":"238.2531"},{"1":"2019-02-04","2":"243.4","3":"245.70","4":"241.7","5":"243.5","6":"12408872","7":"237.8623"},{"1":"2019-02-05","2":"244.4","3":"247.50","4":"243.4","5":"247.0","6":"14859769","7":"241.2813"},{"1":"2019-02-06","2":"244.6","3":"249.90","4":"243.8","5":"249.8","6":"12336920","7":"244.0165"},{"1":"2019-02-07","2":"248.3","3":"249.40","4":"239.8","5":"240.0","6":"18654016","7":"234.4434"},{"1":"2019-02-08","2":"239.1","3":"241.70","4":"236.4","5":"239.1","6":"16695918","7":"233.5642"},{"1":"2019-02-11","2":"238.7","3":"239.80","4":"234.2","5":"237.8","6":"18313884","7":"232.2943"},{"1":"2019-02-12","2":"239.6","3":"241.00","4":"237.6","5":"240.3","6":"12312437","7":"234.7364"},{"1":"2019-02-13","2":"241.4","3":"243.80","4":"239.4","5":"242.5","6":"16373775","7":"236.8855"},{"1":"2019-02-14","2":"240.8","3":"244.00","4":"240.8","5":"241.6","6":"14548987","7":"236.0063"},{"1":"2019-02-15","2":"245.0","3":"249.60","4":"238.7","5":"247.5","6":"23917643","7":"241.7697"},{"1":"2019-02-18","2":"249.7","3":"254.50","4":"248.5","5":"252.0","6":"21604262","7":"246.1656"},{"1":"2019-02-19","2":"251.7","3":"255.90","4":"251.6","5":"255.8","6":"28544461","7":"249.8776"},{"1":"2019-02-20","2":"256.4","3":"259.90","4":"255.6","5":"258.0","6":"17569853","7":"252.0266"},{"1":"2019-02-21","2":"258.4","3":"258.40","4":"253.0","5":"255.2","6":"33008258","7":"249.2915"},{"1":"2019-02-22","2":"255.2","3":"259.00","4":"254.9","5":"256.1","6":"12012993","7":"250.1706"},{"1":"2019-02-25","2":"256.0","3":"259.70","4":"255.4","5":"259.2","6":"11356616","7":"253.1989"},{"1":"2019-02-26","2":"257.3","3":"260.60","4":"256.8","5":"260.0","6":"22803285","7":"253.9803"},{"1":"2019-02-27","2":"259.4","3":"264.70","4":"258.1","5":"263.3","6":"18481297","7":"257.2039"},{"1":"2019-02-28","2":"261.6","3":"267.80","4":"260.8","5":"265.7","6":"23018745","7":"259.5484"},{"1":"2019-03-01","2":"268.0","3":"268.30","4":"263.0","5":"263.3","6":"15710580","7":"257.2039"},{"1":"2019-03-04","2":"264.7","3":"268.00","4":"263.8","5":"266.3","6":"13083024","7":"260.1345"},{"1":"2019-03-05","2":"266.3","3":"267.60","4":"257.4","5":"259.9","6":"24444830","7":"253.8826"},{"1":"2019-03-06","2":"258.9","3":"262.10","4":"253.3","5":"261.5","6":"15027404","7":"255.4456"},{"1":"2019-03-07","2":"260.1","3":"264.30","4":"257.4","5":"260.5","6":"29284935","7":"254.4687"},{"1":"2019-03-08","2":"257.7","3":"259.40","4":"255.9","5":"257.0","6":"25056426","7":"251.0498"},{"1":"2019-03-11","2":"258.9","3":"259.00","4":"256.6","5":"257.1","6":"15127429","7":"251.1475"},{"1":"2019-03-12","2":"261.0","3":"266.50","4":"258.6","5":"258.8","6":"30125505","7":"252.8081"},{"1":"2019-03-13","2":"259.4","3":"262.50","4":"257.4","5":"261.2","6":"12312013","7":"255.1526"},{"1":"2019-03-14","2":"262.4","3":"268.10","4":"262.4","5":"265.9","6":"16976305","7":"259.7437"},{"1":"2019-03-15","2":"266.3","3":"268.80","4":"265.7","5":"268.8","6":"19267831","7":"262.5766"},{"1":"2019-03-18","2":"269.0","3":"274.20","4":"268.6","5":"269.0","6":"18601721","7":"262.7719"},{"1":"2019-03-19","2":"270.2","3":"272.90","4":"268.4","5":"270.4","6":"13613739","7":"264.1395"},{"1":"2019-03-20","2":"270.8","3":"271.60","4":"264.4","5":"265.0","6":"25057191","7":"258.8646"},{"1":"2019-03-21","2":"253.0","3":"255.20","4":"247.2","5":"248.9","6":"20368744","7":"246.3915"},{"1":"2019-03-22","2":"250.4","3":"251.00","4":"246.1","5":"248.2","6":"26906600","7":"245.6986"},{"1":"2019-03-25","2":"247.6","3":"250.80","4":"245.6","5":"247.9","6":"13631938","7":"245.4016"},{"1":"2019-03-26","2":"249.1","3":"250.40","4":"245.9","5":"247.4","6":"13706029","7":"244.9067"},{"1":"2019-03-27","2":"246.7","3":"254.10","4":"246.7","5":"251.4","6":"22882670","7":"248.8663"},{"1":"2019-03-28","2":"251.1","3":"251.40","4":"247.5","5":"247.5","6":"15195534","7":"245.0057"},{"1":"2019-03-29","2":"249.1","3":"250.60","4":"243.7","5":"247.0","6":"28709541","7":"244.5107"},{"1":"2019-04-01","2":"248.7","3":"249.40","4":"246.0","5":"247.7","6":"22456435","7":"245.2036"},{"1":"2019-04-02","2":"248.2","3":"249.30","4":"245.4","5":"248.3","6":"23510323","7":"245.7976"},{"1":"2019-04-03","2":"251.7","3":"255.40","4":"250.1","5":"253.9","6":"23031975","7":"251.3412"},{"1":"2019-04-04","2":"254.8","3":"255.50","4":"253.3","5":"254.1","6":"21675992","7":"251.5392"},{"1":"2019-04-05","2":"254.5","3":"255.90","4":"249.3","5":"251.7","6":"29270930","7":"249.1633"},{"1":"2019-04-08","2":"251.3","3":"254.00","4":"248.9","5":"252.5","6":"16637732","7":"249.9553"},{"1":"2019-04-09","2":"252.9","3":"257.00","4":"252.3","5":"254.3","6":"15253547","7":"251.7371"},{"1":"2019-04-10","2":"255.4","3":"255.70","4":"252.4","5":"253.2","6":"12785188","7":"250.6482"},{"1":"2019-04-11","2":"254.6","3":"259.50","4":"253.5","5":"257.9","6":"19122362","7":"255.3008"},{"1":"2019-04-12","2":"258.2","3":"261.90","4":"256.7","5":"260.6","6":"16274247","7":"257.9736"},{"1":"2019-04-15","2":"261.9","3":"264.10","4":"261.6","5":"262.5","6":"10814773","7":"259.8545"},{"1":"2019-04-16","2":"263.1","3":"263.20","4":"260.7","5":"262.5","6":"28014988","7":"259.8545"},{"1":"2019-04-17","2":"264.0","3":"266.10","4":"263.1","5":"263.3","6":"9492956","7":"260.6464"},{"1":"2019-04-18","2":"263.8","3":"263.80","4":"257.6","5":"262.4","6":"9808429","7":"259.7555"},{"1":"2019-04-23","2":"264.1","3":"264.10","4":"256.8","5":"259.8","6":"17503780","7":"257.1817"},{"1":"2019-04-24","2":"259.5","3":"259.60","4":"256.4","5":"256.7","6":"16939371","7":"254.1130"},{"1":"2019-04-25","2":"252.8","3":"255.90","4":"247.4","5":"250.0","6":"20779987","7":"247.4805"},{"1":"2019-04-26","2":"241.0","3":"243.70","4":"232.5","5":"240.0","6":"42366837","7":"237.5813"},{"1":"2019-04-29","2":"240.0","3":"242.30","4":"237.0","5":"241.0","6":"19381465","7":"238.5712"},{"1":"2019-04-30","2":"241.2","3":"243.80","4":"238.3","5":"239.6","6":"20777335","7":"237.1853"},{"1":"2019-05-01","2":"237.8","3":"240.50","4":"237.7","5":"239.2","6":"18108235","7":"236.7893"},{"1":"2019-05-02","2":"236.4","3":"242.10","4":"236.2","5":"236.2","6":"20401276","7":"233.8195"},{"1":"2019-05-03","2":"236.7","3":"238.30","4":"235.7","5":"237.7","6":"13847685","7":"235.3044"},{"1":"2019-05-07","2":"236.6","3":"237.00","4":"233.6","5":"235.0","6":"31327958","7":"232.6316"},{"1":"2019-05-08","2":"234.0","3":"235.70","4":"232.3","5":"235.2","6":"16654598","7":"232.8296"},{"1":"2019-05-09","2":"233.2","3":"234.20","4":"231.9","5":"232.2","6":"13387721","7":"229.8598"},{"1":"2019-05-10","2":"232.9","3":"236.20","4":"231.6","5":"232.9","6":"12907211","7":"230.5528"},{"1":"2019-05-14","2":"226.7","3":"230.60","4":"226.2","5":"229.9","6":"10179077","7":"227.5830"},{"1":"2019-05-15","2":"229.6","3":"230.50","4":"227.8","5":"230.2","6":"7922437","7":"227.8800"},{"1":"2019-05-16","2":"229.2","3":"232.10","4":"227.9","5":"231.9","6":"5784550","7":"229.5629"},{"1":"2019-07-09","2":"225.2","3":"229.60","4":"224.6","5":"228.2","6":"14103317","7":"225.9002"},{"1":"2019-07-11","2":"228.2","3":"230.50","4":"227.3","5":"229.7","6":"13731711","7":"227.3851"},{"1":"2019-07-12","2":"229.7","3":"232.20","4":"229.6","5":"230.0","6":"10454022","7":"227.6820"},{"1":"2019-07-15","2":"229.7","3":"230.20","4":"225.9","5":"229.3","6":"8780625","7":"226.9891"},{"1":"2019-07-16","2":"228.7","3":"230.50","4":"228.4","5":"229.9","6":"21410227","7":"227.5830"},{"1":"2019-07-17","2":"229.7","3":"230.60","4":"227.9","5":"229.0","6":"10599753","7":"226.6921"},{"1":"2019-07-18","2":"227.1","3":"231.90","4":"227.1","5":"230.7","6":"9770525","7":"228.3750"},{"1":"2019-07-22","2":"228.2","3":"231.10","4":"225.8","5":"228.5","6":"10911949","7":"226.1971"},{"1":"2019-07-23","2":"226.2","3":"229.60","4":"225.8","5":"228.6","6":"14758035","7":"226.2961"},{"1":"2019-07-24","2":"229.3","3":"229.60","4":"226.9","5":"228.2","6":"9732691","7":"225.9002"},{"1":"2019-07-29","2":"227.7","3":"231.15","4":"227.1","5":"229.5","6":"12813212","7":"227.1871"}],"options":{"columns":{"min":{},"max":[10],"total":[7]},"rows":{"min":[10],"max":[10],"total":[96]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKCgpgYGB7cn0KI1F1ZXN0aW9uIDEuCgojQ3JlYXRlIGEgdmVjdG9yIGNhbGxlZCBzdG9ja19wcmljZXMgd2l0aCB0aGUgZm9sbG93aW5nIGRhdGEgcG9pbnRzOiAyMywgMjcsIDIzLCAyMSwgMzQsIDI0LCAyNSwgMzAsIDM3LCAzMC4KCgoKc3RvY2tfcHJpY2VzIDwtIGMoMjMsIDI3LCAyMywgMjEsIDM0LCAyNCwgMjUsIDMwLCAzNywgMzApCmBgYAoKCmBgYHtyfQojQ3JlYXRlIGEgdmVjdG9yIGNhbGxlZCBkYXlfb2Zfd2Vlaywgd2hpY2ggcmVwZWF0cyBNb25kYXkgdG8gRnJpZGF5IHR3aWNlLiBpLmUuIOKAmE1vbmRheeKAmSwg4oCYVHVlc2RheeKAmSwg4oCYV2VkbmVzZGF54oCZLCDigJhUaHVyc2RheeKAmSwg4oCYRnJpZGF54oCZLCDigJhNb25kYXnigJksIOKAmFR1ZXNkYXnigJksIOKAmFdlZG5lc2RheeKAmSwg4oCYVGh1cnNkYXnigJksIOKAmEZyaWRheeKAmS4KCmRheV9vZl93ZWVrIDwtIHJlcChjKCJNb25kYXkiLCJUdWVzZGF5IiwiV2VkbmVzZGF5IiwiVGh1cnNkYXkiLCJGcmlkYXkiKSwgdGltZXMgPSAyKQpkYXlfb2Zfd2VlawpgYGAKCgpgYGB7cn0KI1F1ZXN0aW9uIDIuCgojQ3JlYXRlIGEgdmVjdG9yIGNhbGxlZCBkYXlfb2Zfd2Vla19mYWN0b3IsIHdoaWNoIGhhcyB0aGUgc2FtZSBkYXRhIGFzIGRheV9vZl93ZWVrLCBidXQgaXMgb2YgZmFjdG9yIHR5cGUuCgpkYXlfb2Zfd2Vla19mYWN0b3IgPC0gYXMuZmFjdG9yKGRheV9vZl93ZWVrKQpkYXlfb2Zfd2Vla19mYWN0b3IKCmBgYAoKYGBge3J9CiNDcmVhdGVkIGEgdmVjdG9yIGNhbGxlZCBuYW1lZF9zdG9ja19wcmljZXMsIHdoaWNoIGNvbnRhaW5zIHRoZSBzdG9jayBwcmljZXMsIG5hbWVkIGJ5IGRheXMgb2YgdGhlIHdlZWsKCm5hbWVzKHN0b2NrX3ByaWNlcykgPC0gZGF5X29mX3dlZWtfZmFjdG9yCm5hbWVkX3N0b2NrX3ByaWNlcyA8LSBzdG9ja19wcmljZXMKbmFtZWRfc3RvY2tfcHJpY2VzCmBgYAoKCmBgYHtyfQojUXVlc3Rpb24gMy4KCiNNYWtlIGEgZGF0YSBmcmFtZSBjYWxsZWQgc3RvY2tfZGF0YSBjb250YWluaW5nIHRoZSBzdG9jayBwcmljZSBhbmQgZGF5IG9mIHRoZSB3ZWVrIGluZm9ybWF0aW9uLCBhbmQgVmlldygpIHRoZSByZXN1bHQuCgpzdG9ja19kYXRhIDwtIGRhdGEuZnJhbWUoc3RvY2tfcHJpY2VzLGRheV9vZl93ZWVrKQoKCgoKCmBgYAoKCmBgYHtyfQpWaWV3KHN0b2NrX2RhdGEpCmBgYAoKCmBgYHtyfQojUXVlc3Rpb24gNC4KCiNNYWtlIGEgbGlzdCBjYWxsZWQgc3RvY2tfbGlzdCB3aXRoIG5hbWVkIGVsZW1lbnRzIGFzIGZvbGxvd3M6IHRoZSB2ZWN0b3Igb2Ygc3RvY2tfcHJpY2VzLCB0aGUgdmVjdG9yIGRheV9vZl93ZWVrLCBhbmQgdGhlIGRhdGEgZnJhbWUgeW91IG1hZGUgaW4gcXVlc3Rpb24gMy4gQ2hvb3NlIHNlbnNpYmxlIG5hbWVzIGZvciB0aGUgbGlzdCBlbGVtZW50cy4Kc3RvY2tfbGlzdCA8LSBsaXN0KAogIGEgPSBzdG9ja19wcmljZXMsCiAgYiA9IGRheV9vZl93ZWVrLAogIGMgPSBzdG9ja19kYXRhCikKCnN0b2NrX2xpc3QKYGBgCgoKYGBge3J9CiNQQVJUIDIKI1F1ZXN0aW9uIDEuCgojU2VsZWN0IHRoZSA0dGgsIDV0aCBhbmQgNnRoIHN0b2NrIHByaWNlcyBmcm9tIHN0b2NrX3ByaWNlcy4KCnN0b2NrX3ByaWNlc1s0OjZdCgoKI1NlbGVjdCB0aGUgc3RvY2sgcHJpY2VzIGdyZWF0ZXIgdGhhbiAzMCBmcm9tIHN0b2NrX3ByaWNlcwoKc3RvY2tfcHJpY2VzW3N0b2NrX3ByaWNlcz4zMF0KYGBgCgoKYGBge3J9CiNRdWVzdGlvbiAyLgoKI1NlbGVjdCB0aGUgZGF5X29mX3dlZWsgY29sdW1uIGZyb20gdGhlIHN0b2NrX2RhdGEgZGF0YSBmcmFtZS4KCnN0b2NrX2RhdGFbICwiZGF5X29mX3dlZWsiXQoKCmBgYAoKYGBge3J9CiNTZWxlY3QgdGhlIHJvd3Mgb2YgdGhlIHN0b2NrX2RhdGEgZGF0YSBmcmFtZSB3aGVyZSB0aGUgc3RvY2tfcHJpY2VzIGFyZSBsZXNzIHRoYW4gMjUuCgpzdWJzZXQoc3RvY2tfZGF0YSwgc3RvY2tfcHJpY2VzIDwgMjUpCgpgYGAKCgpgYGB7cn0KI1NlbGVjdCB0aGUgMXN0IGNvbHVtbiBvZiBzdG9ja19kYXRhLgoKc3RvY2tfZGF0YVsgLDFdCmBgYAoKCmBgYHtyfQoKI1NlbGVjdCB0aGUgM3JkIHJvdyBvZiBzdG9ja19kYXRhLgoKc3RvY2tfZGF0YVszLCBdCmBgYAoKCmBgYHtyfQojU2VsZWN0IHRoZSAzcmQgZWxlbWVudCBpbiB0aGUgMXN0IHJvdyBvZiBzdG9ja19kYXRhLgoKc3RvY2tfZGF0YVsxLDNdCmBgYAoKCmBgYHtyfQojUXVlc3Rpb24gNC4KCiNTZWxlY3QgdGhlIGRhdGEgZnJhbWUgZnJvbSB3aXRoaW4gdGhlIGxpc3Qgb2Ygc3RvY2tzLgoKc3RvY2tfbGlzdFsiYyJdCgpzdG9ja19saXN0JGMKCmBgYAoKYGBge3J9Cmluc3RhbGwucGFja2FnZXMoInRpZHlxdWFudCIpCmBgYAoKCmBgYHtyfQpsaWJyYXJ5KHRpZHlxdWFudCkKYGBgCgoKYGBge3J9CnJicyA8LXRxX2dldCgiUkJTLkwiLCBnZXQgPSAic3RvY2sucHJpY2VzIiwgZnJvbSA9ICIyMDE5LTAxLTAxIiwgdG8gPSAiMjAxOS0xMC0wMSIpCmBgYAoKCmBgYHtyfQpyYnNbICxjKCJkYXRlIiwiY2xvc2UiKV0KYGBgCgoKYGBge3J9CnN1YnNldChyYnMsIGNsb3NlPm1lYW4oY2xvc2UpKQpgYGAKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKMi4yLjEKCmBgYHtyfQp4IDwtIGMoMSwgMiwgMykKCm91dHB1dCA8LSB4ICogMTUgKyA0CgpvdXRwdXQKYGBgCgphbnN3ZXIKYGBge3J9CnRpbWVzXzE1X2FkZF80IDwtIGZ1bmN0aW9uKHgpIHsKICB4ICogMTUgKyA0Cn0KCnRpbWVzXzE1X2FkZF80KDIpCmBgYAoKCgoyLjIuMgoKYGBge3J9CmJpcmRfbmFtZSA8LSBjKCJnb29zZSIsICJkdWNrIiwicGlnZW9uIikKCnggPC0gYygiZ29vc2UiLCJhcHBsZSIsIDUsICJzZWFndWxsIikKCmlmZWxzZSh4ICVpbiUgYmlyZF9uYW1lLCAiYmlyZCIsICJub3QgYmlyZCIpCgoKCmBgYAoKCmBgYHtyfQp4IDwtICJhcHBsZSIKCmlmKHggJWluJSBiaXJkX25hbWUpIHsKICBwcmludCgiYmlyZCIpCn0KcHJpbnQoIm5vdCBiaXJkIikKYGBgCgphbnN3ZXI6CgpgYGB7cn0KaXNfYmlyZCA8LSBmdW5jdGlvbih4KSB7CiAgaWYgKHggJWluJSBjKCJnb29zZSIsICJkdWNrIiwgInBpZ2VvbiIpKSB7CiAgICByZXR1cm4oImJpcmQiKQogIH0gZWxzZSB7CiAgICByZXR1cm4oIm5vdCBiaXJkIikKICB9Cn0KYGBgCgoKCjIuMi4zCgpgYGB7cn0KeCA8LSAieSIKCmlmZWxzZSggaXMubnVtZXJpYyh4KSA9PSBUUlVFLCB4ICogMTAsICJpbnZhbGlkIGlucHV0IikKCmBgYAoKYW5zd2VyCmBgYHtyfQp0aW1lc18xMCA8LSBmdW5jdGlvbih4KSB7CiAgaWYgKGlzLm51bWVyaWMoeCkpIHsKICAgIHJldHVybih4ICogMTApCiAgfSBlbHNlIHsKICAgIHJldHVybigiSW52YWxpZCBpbnB1dCIpCiAgfQp9CmBgYAoKCjIuMy4xLjEKYGBge3J9CgpzaXplcyA8LSBjKDEzLCAxNSwgMTAsIDgsIDIyKQoKaWZlbHNlKHNpemVzID4gMTAsICJCaWciLCAiU21hbGwiKQoKCgoKYGBgCgoKMi4zLjEuMgpgYGB7cn0KCmRwbHlyOjpyZWNvZGUoc2l6ZXMsIAoiMTMiID0gIkJpZyIsIAoiMTUiID0gIkJpZyIsCiIxMCIgPSAiU21hbGwiLCAKIjgiICA9ICJTbWFsbCIsIAoiMjIiID0gIkJpZyIgCikKCiNhbnN3ZXIKZHBseXI6OnJlY29kZShzaXplcywgYDEwYCA9ICJTbWFsbCIsIGA4YCA9ICJTbWFsbCIsIC5kZWZhdWx0ID0gIkJpZyIpCgpgYGAKCgoyLjMuMS4zCmBgYHtyfQoKZHBseXI6OmNhc2Vfd2hlbigKICBzaXplcyA+IDEwIH4gIkJpZyIsCiAgVFJVRSAgICAgICB+ICJTbWFsbCIKKQoKCgpgYGAKCgoyLjMuMi4xCmBgYHtyfQoKZnJ1aXQgPC0gYygiYXBwbGUiLCAiYXBwbGUiLCAiYmFuYW5hIiwgImNoZXJyeSIsICJjaGVycnkiKQoKYGBgCgoKMi4zLjIuMgpgYGB7cn0KZHBseXI6OnJlY29kZShmcnVpdCwKICAiYXBwbGUiID0gImFscGFjYSIsCiAgImJhbmFuYSIgPSAiYm9ub2JvIiwKICAiY2hlcnJ5IiA9ICJjaGlwbXVuayIKKQpgYGAKCgoyLjMuMi4zCmBgYHtyfQoKCmRwbHlyOjpjYXNlX3doZW4oCiAgZnJ1aXQgPT0gImFwcGxlIiAgfiAiYWxwYWNhIiwKICBmcnVpdCA9PSAiYmFuYW5hIiB+ICJib25vYm8iLAogIGZydWl0ID09ICJjaGVycnkiIH4gImNoaXBtdW5rIgopCgoKYGBgCgoyLjMuMy4xCmBgYHtyfQoKd2lmZV9hZ2UgPC0gYygyOUwsIDMwTCwgMzZMLCAzMUwsIDIyTCkKaHVzYmFuZF9hZ2UgPC0gYygyOEwsIDM1TCwgMzJMLCAzMUwsIDI5TCkKCmFnZV9kaWZmZXJlbmNlIDwtIGh1c2JhbmRfYWdlIC0gd2lmZV9hZ2UKCmFnZV9kaWZmZXJlbmNlCgoKCmBgYAoKCgoK</div>
 
 
 
@@ -2233,7 +2011,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("Data_Types_Homework.Rmd");
+  window.initializeSourceEmbed("mvp_weekend_1.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

@@ -1,0 +1,115 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+1.Read in the state_income_data.csv file using the appropriate function.
+
+```{r}
+
+library(readxl)
+library(openxlsx)
+library(readr)
+
+state_income_data <- read_csv("data/state_income_data.csv")
+
+```
+
+```{r}
+View(state_income_data)
+```
+
+2. How do you specify your own column names when using read_csv()?
+
+```{r}
+
+#  read_csv(x, col_names = ...)
+```
+
+3. Read in the cars.csv file and use the col_types() function to ensure you load in:
+
+X1 as character
+mpg, cyl, disp, hp as double
+vs as logical
+
+```{r}
+
+```
+
+
+```{r}
+
+cars <- read_csv("data/cars.csv", 
+                 col_types = cols(vs = col_logical())
+                 )
+cars
+
+```
+
+
+4. Read in the scotland.txt file using the appropriate function
+
+```{r}
+
+scotland <- read_delim("data/scotland.txt", skip = 1, delim = ";")
+scotland
+View(scotland)
+
+```
+
+5. How do you read text into a one element character vector?
+
+```{r}
+
+
+
+```
+
+6. Read in the steam-200k-sample.csv file. Fix any problems you may encounter.
+
+```{r}
+
+
+
+```
+
+7. Read in the historic_eu_payments.tsv file.
+
+```{r}
+historic_eu_payments <- read_tsv("data/historic_eu_payments.tsv")
+historic_eu_payments
+```
+
+8. How do you read lines of text into a multi-element text vector?
+
+```{r}
+
+```
+
+
+9. Read in the africa_health_data.dta file using the appropriate method.
+
+
+```{r}
+
+library(readr)
+library(haven)
+
+africa_health <- read_stata("data/africa_health_data.dta")
+africa_health <- as_factor(africa_health)
+africa_health
+```
+
+
+10. Read in the JSON file from the following url: http://makemeanalyst.com/wp-content/uploads/2017/06/sample_json.txt
+
+```{r}
+library(jsonlite)
+
+sample_json <- fromJSON("http://makemeanalyst.com/wp-content/uploads/2017/06/sample_json.txt")
+
+sample_json
+
+```
+
+

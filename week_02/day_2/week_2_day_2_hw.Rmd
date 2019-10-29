@@ -1,0 +1,89 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+keyring_unlock("local")
+username <- key_get("postgres_username", keyring = "local") 
+password <- key_get("postgres_password", keyring = "local")
+keyring_lock("local")
+db_connect_wrestling <- dbConnect(drv = PostgreSQL(), user = username, password = password, dbname = "wrestling", host = "localhost")
+rm(username)
+rm(password)
+
+
+
+```
+
+
+
+```{r}
+dbListTables(conn = db_connect_wrestling)
+```
+
+
+```{r}
+dbListFields(conn = db_connect_wrestling, name = "wrestlers")
+
+
+```
+
+
+```{r}
+data <- dbGetQuery(conn = db_connect_wrestling, statement = "SELECT * FROM wrestlers")
+class(data)
+head(data)
+```
+
+
+```{r}
+dbGetQuery(db_connect_wrestling,
+           "SELECT * FROM wrestlers
+           WHERE born = 'United Kingdom'")
+```
+
+
+```{r}
+dbGetQuery(db_connect_wrestling,
+           "SELECT * FROM wrestlers
+           WHERE born = 'Japan'
+           AND total_matches >= 40")
+
+```
+
+
+```{r}
+
+dbGetQuery(db_connect_wrestling,
+           "SELECT * FROM wrestlers
+           WHERE win_percent BETWEEN 50 AND 60")
+```
+
+```{r}
+dbGetQuery(db_connect_wrestling,
+           "SELECT * FROM wrestlers
+           WHERE name ILIKE 'X%'")
+
+
+```
+
+
+```{r}
+
+dbGetQuery(db_connect_wrestling,
+           "SELECT * FROM wrestlers
+           WHERE born LIKE 'I%'")
+
+
+```
+
+
+```{r}
+
+
+dbGetQuery(db_connect_wrestling,
+           "SELECT * FROM wrestlers
+           WHERE born NOT LIKE 'T%'")
+```
+

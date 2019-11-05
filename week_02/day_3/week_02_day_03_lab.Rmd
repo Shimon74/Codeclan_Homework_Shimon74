@@ -1,0 +1,170 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+1.
+```{r}
+dbGetQuery(db_connect,
+           "SELECT * FROM employees
+           WHERE department = 'Human Resources'")
+```
+
+2.
+```{r}
+dbGetQuery(db_connect,
+           "SELECT first_name, last_name, country
+           FROM employees
+           WHERE department = 'Legal'")
+```
+
+3.
+```{r}
+
+dbGetQuery(db_connect,
+           "SELECT COUNT(id) AS employees_Portugal
+           FROM employees
+           WHERE country = 'Portugal'")
+```
+
+4
+
+```{r}
+
+dbGetQuery(db_connect,
+           "SELECT COUNT(id) AS employees_Portugal_or_Spain
+           FROM employees
+           WHERE country IN ('Spain','Portugal')")
+
+```
+
+5.
+```{r}
+
+dbGetQuery(db_connect,
+           "SELECT COUNT(id) AS no_local_account
+           FROM pay_details 
+           WHERE local_account_no IS NULL")
+
+```
+
+6.
+```{r}
+dbGetQuery(db_connect,
+           "SELECT COUNT(id) AS no_local_no_iban
+           FROM pay_details
+           WHERE local_account_no IS NULL
+           AND iban IS NULL")
+
+
+
+
+```
+
+7.
+```{r}
+
+dbGetQuery(db_connect,
+           "SELECT first_name, last_name
+           FROM employees
+           ORDER BY last_name ASC NULLS LAST")
+
+
+```
+
+8.
+```{r}
+
+dbGetQuery(db_connect,
+           "SELECT first_name, last_name, country
+           FROM employees
+           ORDER BY (country,last_name) NULLS LAST")
+
+
+
+
+```
+
+9.
+```{r}
+dbGetQuery(db_connect,
+           "SELECT * FROM employees
+           ORDER BY salary DESC NULLS LAST
+           LIMIT 10")
+
+
+
+```
+
+10.
+```{r}
+
+dbGetQuery(db_connect,
+           "SELECT first_name, last_name, salary
+           FROM employees
+           WHERE country = 'Hungary'
+           ORDER BY salary ASC NULLS LAST
+           LIMIT 1")
+
+
+```
+
+11.
+```{r}
+dbGetQuery(db_connect,
+           "SELECT COUNT(*) AS names_beginning_F
+           FROM employees
+           WHERE first_name LIKE 'F%'"
+           )
+```
+
+12
+```{r}
+dbGetQuery(db_connect,
+           "SELECT COUNT(*) AS yahoo_email
+           FROM employees
+           WHERE email ILIKE '%yahoo%'"
+           )
+
+
+
+
+```
+
+13
+```{r}
+
+dbGetQuery(db_connect,
+           "SELECT COUNT(*) FROM employees AS pension_enrolled
+           WHERE pension_enrol = TRUE
+           AND (country != 'France' OR country !='Germany')
+           ")
+```
+
+14
+```{r}
+
+dbGetQuery(db_connect,
+           "SELECT pension_enrol, COUNT(*) 
+           FROM employees
+           GROUP BY pension_enrol"
+           )
+
+
+```
+
+15
+
+```{r}
+dbGetQuery(db_connect,
+           "SELECT MAX (salary) 
+           FROM employees
+           WHERE department = 'Engineering'
+           AND fte_hours = 1.00"
+           )
+
+
+
+```
+
+16

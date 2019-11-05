@@ -1,0 +1,139 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(keyring)
+library(RPostgreSQL)
+
+
+```
+
+```{r}
+dbGetQuery(db_connect,
+           "SELECT * 
+             FROM care_schedule")
+
+
+
+```
+
+
+
+```{r}
+
+
+dbListTables(conn = db_connect)
+```
+
+
+```{r}
+dbGetQuery(db_connect,
+           "SELECT * FROM keepers")
+```
+
+
+```{r}
+
+
+
+dbGetQuery(db_connect,
+           "SELECT * 
+             FROM animals 
+                INNER JOIN diets
+                 ON animals.diet_id = diets.id")
+```
+
+
+```{r}
+dbGetQuery(db_connect,
+           "SELECT animals.name, diets.diet_type
+           FROM animals
+                INNER JOIN diets
+                 ON animals.diet_id = diets.id")
+```
+
+
+```{r}
+dbGetQuery(db_connect,
+           "SELECT a.id, a.name, a.species, a.age, d.diet_type
+           FROM animals AS a
+           INNER JOIN diets AS d
+           ON a.diet_id = d.id
+           WHERE a.age > 4")
+```
+
+
+```{r}
+dbGetQuery(db_connect,
+           "SELECT a.id, a.name, a.species, a.age, d.diet_type
+           FROM animals AS a
+           INNER JOIN diets AS d
+           ON a.diet_id = d.id
+           WHERE d.diet_type = 'herbivore'")
+
+
+```
+
+LEFT JOIN AND RIGHT JOIN
+```{r}
+dbGetQuery(db_connect,
+           "SELECT * 
+             FROM animals AS a
+           LEFT JOIN diets AS d
+           on a.diet_id = d.id")
+
+
+```
+
+
+```{r}
+dbGetQuery(db_connect,
+           "SELECT * 
+             FROM animals AS a
+           RIGHT JOIN diets AS d
+           on a.diet_id = d.id")
+```
+
+
+```{r}
+
+dbGetQuery(db_connect,
+           "SELECT d.diet_type, COUNT(*)
+             FROM diets AS d
+           LEFT JOIN animals AS a
+           on a.diet_id = d.id
+           GROUP BY diet_type")
+
+
+```
+
+
+```{r}
+
+
+
+
+dbGetQuery(db_connect,
+           "SELECT * FROM
+           animals AS a
+           INNER JOIN care_schedule AS cs
+           ON a.id = cs.animal_id")
+```
+
+
+```{r}
+dbGetQuery(db_connect,
+           "SELECT a.name AS animal_name,
+           cs.day, k.name AS 
+           keeper_name
+           FROM (
+           animals AS a
+           INNER JOIN care_schedule AS cs
+           ON a.id = cs.animal_id)
+           INNER JOIN keepers AS k
+           ON cs.keeper_id = k.id
+           ORDER BY a.name, cs.day")
+```
+

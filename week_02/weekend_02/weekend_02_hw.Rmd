@@ -1,0 +1,53 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(keyring)
+library(RPostgreSQL)
+```
+
+```{r}
+keyring_unlock("local")
+```
+
+```{r}
+username <- key_get("postgres_username", keyring = "local")
+password <- key_get("postgres_password", keyring = "local")
+keyring_lock("local")
+
+```
+
+```{r}
+db_connect <- dbConnect (drv = PostgreSQL(), user = username, password = password, dbname = "acme_employees", host = "localhost")
+```
+
+```{r}
+all_employees <- dbGetQuery(db_connect,
+           "SELECT * FROM
+           employees")
+
+all_employees
+```
+
+```{r}
+rm(username, password)
+```
+
+
+```{r}
+
+dbGetQuery(db_connect,
+           "SELECT *, CONCAT(first_name, ' ', last_name) AS full_name 
+           FROM employees")
+
+```
+
+
+
+
+
+
+
+

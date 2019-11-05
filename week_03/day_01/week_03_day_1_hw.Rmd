@@ -1,0 +1,166 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+starbucks_drinks <- read_csv("data/starbucks_drinkMenu_expanded.csv")
+
+
+head(starbucks_drinks, 5)
+tail(starbucks_drinks, 5)
+view(starbucks_drinks)
+```
+
+```{r}
+dim(starbucks_drinks)
+names(starbucks_drinks)
+```
+
+```{r}
+summary(starbucks_drinks$Calories)
+```
+
+
+```{r}
+starbucks_drinks
+```
+
+
+
+```{r}
+##starbucks_drinks <- starbucks_drinks_dirty %>%
+##  mutate_at(c("Calories","Fat (g)","Carb. (g)", "Fiber (g)","Protein", "Sodium"), as.integer) %>%
+##  drop_na()
+##starbucks_drinks
+
+```
+
+```{r}
+calories_variance <- starbucks_drinks %>%
+  summarise(Variance_calories = var(Calories))
+
+calories_variance
+```
+
+
+```{r}
+calories_mean <- starbucks_drinks %>%
+  summarise(Calories_mean = mean(Calories))
+
+calories_mean
+```
+
+
+
+```{r}
+histogram_starbucks_drinks <- hist(starbucks_drinks$Calories)
+histogram_starbucks_drinks
+```
+
+
+```{r}
+boxplot(starbucks_drinks$Calories)
+```
+
+
+```{r}
+outliers <- boxplot(starbucks_drinks$Calories, plot=FALSE)$out
+
+print(outliers)
+```
+
+```{r}
+##Keeping outliers as the names are in keeping with other high calorie sigantire drinks. There is no indication of serving size, however it would seem that the highest calorie count drinks can be attributed to the largest size drinks. Other variables such as Fat, Carbs are increase proportionately, further adding credibility to the calorie count.
+```
+
+
+```{r}
+# Question 4
+
+starbucks_drinks_no_na <- starbucks_drinks %>%
+  select("Beverage_category", "Beverage", "Beverage_prep", "Calories") %>%
+  drop_na()
+
+starbucks_drinks_no_na
+
+#same number of rows returned....no N/A found 
+```
+
+```{r}
+#5
+
+classic_espresso_drinks <- filter(starbucks_drinks, Beverage_category == "Classic Espresso Drinks")
+
+classic_espresso_drinks
+
+```
+
+
+```{r}
+#6
+
+drink_calories <- classic_espresso_drinks %>%
+   select("Beverage_category", "Beverage", "Beverage_prep", "Calories") %>%
+  mutate(calorie_diff = Calories - 135) %>%
+arrange(desc(calorie_diff))
+
+drink_calories
+
+view(drink_calories)
+
+```
+
+
+```{r}
+
+  
+```
+
+
+```{r}
+
+#7
+#cannot get group by to work
+#drinks_grouped <- group_by(classic_espresso_drinks, Beverage_prep)
+
+drinks_grouped <- arrange(classic_espresso_drinks, Beverage_prep)
+
+view(drinks_grouped)
+```
+
+```{r}
+
+
+drinks_grouped <- classic_espresso_drinks %>%
+  arrange(Beverage_prep)
+view(drinks_grouped)
+
+
+
+```
+
+```{r}
+mean(drinks_grouped)
+```
+
+
+```{r}
+
+#8
+
+the_pipe_attempt <- classic_espresso_drinks %>%
+  select("Beverage_category", "Beverage", "Beverage_prep", "Calories") %>%
+  mutate(calorie_diff = Calories - 135) %>%
+arrange(desc(calorie_diff))
+
+
+  
+the_pipe_attempt
+
+```
+
+
+
+
+

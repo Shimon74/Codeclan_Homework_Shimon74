@@ -60,7 +60,8 @@ histogram_starbucks_drinks
 
 
 ```{r}
-boxplot(starbucks_drinks$Calories)
+boxplot_drinks <- boxplot(starbucks_drinks$Calories)
+boxplot_drinks
 ```
 
 
@@ -100,7 +101,7 @@ classic_espresso_drinks
 ```{r}
 #6
 
-drink_calories <- classic_espresso_drinks %>%
+drink_calories <- starbucks_drinks %>%
    select("Beverage_category", "Beverage", "Beverage_prep", "Calories") %>%
   mutate(calorie_diff = Calories - 135) %>%
 arrange(desc(calorie_diff))
@@ -121,42 +122,28 @@ view(drink_calories)
 ```{r}
 
 #7
-#cannot get group by to work
-#drinks_grouped <- group_by(classic_espresso_drinks, Beverage_prep)
 
-drinks_grouped <- arrange(classic_espresso_drinks, Beverage_prep)
-
-view(drinks_grouped)
-```
-
-```{r}
-
-
-drinks_grouped <- classic_espresso_drinks %>%
-  arrange(Beverage_prep)
-view(drinks_grouped)
-
-
+drinks_grouped <- group_by(starbucks_drinks, Beverage_prep)
+drinks_summmary <- summarise(drinks_grouped, mean_cal = mean(Calories))
+drinks_summary_grouped <-arrange(drinks_summmary, desc(mean_cal))
 
 ```
 
-```{r}
-mean(drinks_grouped)
-```
 
 
 ```{r}
 
 #8
 
-the_pipe_attempt <- classic_espresso_drinks %>%
+the_pipe_of_death <- starbucks_drinks %>%
   select("Beverage_category", "Beverage", "Beverage_prep", "Calories") %>%
+  group_by(starbucks_drinks, Beverage_prep) %>%
   mutate(calorie_diff = Calories - 135) %>%
-arrange(desc(calorie_diff))
+  arrange
+
 
 
   
-the_pipe_attempt
 
 ```
 

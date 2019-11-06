@@ -1,0 +1,82 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+gov_women <- read_csv("data/women_in_gov.csv", skip = 4)
+
+
+
+dim(gov_women)
+head(gov_women)
+view(gov_women)
+
+```
+
+
+```{r}
+
+gov_women_long <- gov_women %>%
+  select(-"Indicator Code", -"Indicator Name",-"X64", -c("1960":"1996"))%>%
+  pivot_longer(cols = c("1997":"2018"),
+               names_to = "year",
+               values_to = "prop_women")
+  
+
+
+gov_women_long
+
+view(gov_women_long)
+
+```
+
+```{r}
+gov_women_long_clean_names <- clean_names(gov_women_long)
+
+gov_women_long_clean_names
+
+
+
+```
+
+
+```{r}
+
+
+gov_women_NA_filtered <- gov_women_long_clean_names %>%
+  filter(is.na(prop_women))
+
+gov_women_NA_filtered
+```
+
+```{r}
+  gov_women_na_count <- gov_women_NA_filtered %>%
+  summarise( count= sum(is.na(prop_women)))
+
+gov_women_na_count
+
+
+```
+
+
+```{r}
+
+gov_women_drop_na <- gov_women_long_clean_names %>%
+  drop_na()
+
+gov_women_drop_na
+
+view(gov_women_drop_na)
+
+## Droped all NA's due to the fact that entire country figures are missing. Imputing figures would skew the data set.
+
+```
+
+
+```{r}
+
+
+
+```
+

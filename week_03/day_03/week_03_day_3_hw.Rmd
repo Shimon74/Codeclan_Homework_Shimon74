@@ -1,0 +1,83 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+
+code_clan_tweets <- read_csv("data/code_clan_tweets.csv")
+
+```
+
+```{r}
+dim(code_clan_tweets)
+names(code_clan_tweets)
+code_clan_tweets
+```
+
+
+```{r}
+view(code_clan_tweets)
+```
+
+```{r}
+##2
+
+sum_favorite_count <- code_clan_tweets %>%
+  summarise(sum(favorite_count))
+
+sum_favorite_count
+```
+
+```{r}
+boxplot(code_clan_tweets$favorite_count)
+```
+
+
+
+```{r}
+##3
+
+total_favourited_tweets <- code_clan_tweets %>%
+  filter(favorite_count, is_quote == FALSE) %>%
+  summarise(sum(favorite_count))
+
+
+total_favourited_tweets
+```
+
+
+
+```{r}
+##4
+
+mean_retweet_by_source <- code_clan_tweets %>%
+  filter(favorite_count, is_quote == FALSE) %>%
+  group_by(source) %>%
+  summarise(mean(retweet_count))
+
+mean_retweet_by_source
+
+```
+
+
+
+```{r}
+##5
+
+code_clan_tweets %>%
+  mutate(media_type = replace(media_type, is.na(media_type), "text")) %>%
+  group_by(media_type) %>%
+  summarise(like_count = sum(favorite_count)) %>%
+  arrange(desc(like_count))
+  
+
+
+```
+
+
+```{r}
+
+
+```
+

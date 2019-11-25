@@ -1,0 +1,12 @@
+name: Olympic_medals
+title: Olympic_medals
+username:
+account: shimonm
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1506242
+bundleId: 2607079
+url: https://shimonm.shinyapps.io/Olympic_medals/
+when: 1574344580.427
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,79 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(skimr)
+library(ggplot2)
+library(janitor)
+```
+
+```{r}
+
+mobile_brands <- read_csv("data/20190928-items.csv")
+
+
+```
+
+```{r}
+glimpse(mobile_brands)
+view(mobile_brands)
+```
+
+```{r}
+brand_reviews <- clean_names(mobile_brands)
+view(brand_reviews)
+```
+
+
+```{r}
+ brand_reviews %>% 
+  group_by(brand) %>% 
+  summarise(total_reviews = sum(total_reviews))
+```
+
+
+```{r}
+brand_review_stats <- brand_reviews %>% 
+  filter(brand == "Samsung") %>% 
+  summarise(
+    num = n(),
+    mean = mean(rating),
+    sd = sd(rating)
+  )
+brand_review_stats
+```
+
+
+```{r}
+brand_reviews %>% 
+  filter(brand =="Samsung") %>% 
+  ggplot(aes(x = rating)) +
+  geom_histogram(aes(y = ..density..), col = "white") +
+  stat_function(
+    fun = dnorm,
+    args = list(
+      mean = brand_review_stats$mean,
+      sd = brand_review_stats$sd
+    ),
+    col = "red"
+  )
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

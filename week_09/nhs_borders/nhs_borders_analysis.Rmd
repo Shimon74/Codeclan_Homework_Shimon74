@@ -1,0 +1,146 @@
+---
+title: "NHS Borders Cancer Types and Incidences"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r echo=FALSE, message = FALSE}
+library(readr)
+library(tidyverse)
+library(ggplot2)
+library(forcats)
+
+```
+
+```{r echo=FALSE, message=FALSE}
+nhs_data <- read_csv("data/opendata_inc9317_hb2018.csv")
+
+```
+
+```{r echo=FALSE, message=FALSE}
+nhs_data_borders <- nhs_data %>% 
+  filter(HBR2014 == "S08000016") %>% 
+  filter(CancerSite != "All cancer types") %>% 
+  filter(Sex != "All")
+
+```
+
+
+
+```{r echo=FALSE, message=FALSE}
+nhs_data_borders %>% 
+                  group_by(Year) %>% 
+                  summarise(total = sum(IncidencesAllAges)) %>% 
+                  ggplot() +
+                  aes(x = Year, y = total) +
+                  geom_line() +
+                  scale_x_continuous(breaks = c(1993,2017)) +  
+                  scale_x_continuous(breaks = c(1993,2000,2007,2014)) +
+                  xlab("Timeline - 1993 to 2017") +
+                  ylab("Total Incidences - NHS Borders Region")
+
+
+```
+
+
+
+
+
+
+
+```{r echo=FALSE, message=FALSE}
+
+ totals_by_cancer_site <- nhs_data_borders %>% 
+  select(CancerSite,Year,Sex,IncidencesAllAges) %>% 
+  group_by(CancerSite) %>% 
+  summarise(count = sum(IncidencesAllAges)) %>% 
+  arrange(desc(count)) 
+
+totals_by_cancer_site
+
+```
+
+
+```{r echo=FALSE, message=FALSE}
+totals_by_cancer_site %>% 
+  filter(count > 100) %>% 
+  ggplot() +
+  aes(x = fct_inorder(CancerSite), y = count) +
+  geom_col() + 
+  coord_flip() +
+  xlab("Cancer Sites - greater than 100 incidences")
+  
+
+
+
+```
+
+
+
+```{r echo=FALSE, message=FALSE}
+nhs_data_borders %>% 
+  select(CancerSite,Year,IncidencesAllAges) %>% 
+  group_by(CancerSite, Year) %>% 
+  summarise(count = sum(IncidencesAllAges)) %>% 
+  filter(count > 100)  %>% 
+  ggplot() +
+  aes(x = Year, y = count, colour = CancerSite) +
+  geom_line() +
+  scale_x_continuous(breaks = c(1993,2000,2007,2014))
+  
+
+
+```
+
+
+```{r echo=FALSE, message=FALSE}
+
+nhs_data_borders %>% 
+  select(CancerSite,Year,Sex,IncidencesAllAges) %>% 
+  group_by(CancerSite, Year,Sex) %>% 
+  summarise(count = sum(IncidencesAllAges)) %>% 
+  filter(count > 100) %>% 
+  ggplot() +
+  aes(x = Year, y = count, colour = CancerSite) +
+  geom_line() +
+  facet_wrap(~Sex) +
+  scale_x_continuous(breaks = c(1993,2000,2007,2014))
+
+
+```
+
+
+
+```{r echo=FALSE, message=FALSE}
+
+nhs_data_borders %>% 
+  select(CancerSite,Year,Sex,IncidencesAllAges) %>% 
+  group_by(CancerSite, Year,Sex) %>% 
+  summarise(count = sum(IncidencesAllAges)) %>% 
+  filter(count > 50) %>% 
+  ggplot() +
+  aes(x = Year, y = count, colour = CancerSite) +
+  geom_line() +
+  facet_wrap(~Sex) 
+```
+
+```{r echo=FALSE, message=FALSE}
+nhs_data_borders %>% 
+  select(CancerSite,Year,Sex,IncidencesAllAges) %>% 
+  group_by(CancerSite, Year,Sex) %>% 
+  summarise(count = sum(IncidencesAllAges)) %>% 
+  filter(count > 50) %>% 
+  ggplot() +
+  aes(x = Year, y = count, colour = CancerSite) +
+  geom_line() +
+  facet_wrap(~Sex) +
+  geom_smooth() +
+  scale_x_continuous(breaks = c(1993,2000,2007,2014)) +
+  theme(legend.position = "none")
+  
+
+
+
+```
+
